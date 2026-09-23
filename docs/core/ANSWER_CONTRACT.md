@@ -66,7 +66,8 @@ LLMs may phrase or summarize. They must not upgrade truth status.
 
 ```text
 LLM = Voice
-Graph / Canon = Truth
+Physical L3 = Multi-status storage
+Strict Canon = Governed trusted read projection
 FactsPack = Evidence
-TruthGate = Boundary
+TruthGate = Admission boundary
 ```

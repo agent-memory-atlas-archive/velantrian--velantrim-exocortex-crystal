@@ -11,16 +11,18 @@ Velantrim has multiple design lines: Crystal, Titan, V8.x, V9/V10 research notes
 ## Canonical formula
 
 ```text
-Graph = Truth
+Physical L3 = Multi-status memory storage
+Strict Canon = Governed trusted read projection
 LLM = Voice
 Memory = Physiology
 Cognition = Meta-Layer
 Volition = Agency
 ```
 
-For Crystal public wording, use the formula carefully:
+For Crystal public wording, keep storage and authority separate:
 
 ```text
+Physical L3 membership does not imply strict Canon or objective truth.
 LLM is a speech/synthesis layer, not the source of verified truth.
 ```
 

@@ -1,15 +1,17 @@
 # Velantrim Exo-Cortex Crystal
 
 > Local-first, stdlib-only, verifiable AI memory infrastructure. Crystal stores
-> source-grounded facts in a canonical graph, admits new knowledge only through a
-> TruthGate, and emits replayable traces/receipts so answers can be audited.
+> source-grounded claims in a physical multi-status L3 graph, gates admission
+> through TruthGate, and derives strict Canon via a governed read projection. It
+> emits replayable traces/receipts so answers can be audited.
 > This is the public, grant-facing open core (reviewer-preview) — not Titan,
 > Full Exo-Cortex, or Research Mode.
 
 Version: v0.3.0 (reviewer-preview). License: AGPL-3.0.
 
-Core formula: Graph/Canon = Truth | Index/Retrieval = Find | TruthGate = Admission |
-Trace/Receipt = Proof | LLM = Speech | Human = Final Judgment.
+Core formula: Physical L3 = Multi-status storage | Strict Canon = Governed trusted read projection |
+Index/Retrieval = Find | TruthGate = Admission | Trace/Receipt = Proof |
+LLM = Speech | Human = Final Judgment.
 
 Quality: 100% line-coverage enforced as a CI gate on Python 3.11 / 3.12; security
 checks include bandit and pip-audit. For current pass/skip counts and the

@@ -47,15 +47,16 @@ an external fact as the same kind of object.
 
 ### 2. The LLM is outside the truth boundary
 
-An LLM may phrase an answer, but it is not the source of truth. Crystal's truth
-boundary is the local graph, the facts, the source metadata, the evidence spans,
-the trace and the receipt.
+An LLM may phrase an answer, but it is not the source of truth. Physical L3 is
+multi-status storage, while strict Canon is a governed trusted read projection.
+Evidence spans, source metadata, trace and receipts preserve the support path.
 
 ```text
 LLM = language/interface layer
-Graph = canonical memory
+Physical L3 graph = multi-status storage
+Strict Canon = governed trusted read projection
 Trace = proof path
-TruthGate = controlled entry into canon
+TruthGate = controlled admission boundary
 ```
 
 ### 3. Receipts make answers replayable

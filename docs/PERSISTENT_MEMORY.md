@@ -1,6 +1,6 @@
 # Persistent Memory Model
 
-Velantrim separates **persistence**, **canonical truth**, and **immutability**. These are related but not identical.
+Velantrim separates **persistence**, **physical storage/admission**, **strict Canon read eligibility**, and **immutability**. These are related but not identical.
 
 > Persistent memory survives process restart.  
 > Gated/admitted memory has passed Guardian + TruthGate and may be persisted
@@ -17,14 +17,14 @@ Velantrim separates **persistence**, **canonical truth**, and **immutability**. 
 |---|---|---:|---:|---|
 | `L0` | in-process LRU cache | RAM only | No | Hot working cache for the current process |
 | `L1` | SQLite | `./data/velantrim_memory.db` | Yes | Working memory, pending facts, ESM state, audit/compliance support |
-| `L3` | Canonical graph backend | `./data/velantrim_l3.db` when SQLite backend is used | Yes, if using `sqlite`, `ladybug`, or `neo4j` | Canonical graph after Guardian + TruthGate |
+| `L3` | Physical multi-status graph backend | `./data/velantrim_l3.db` when SQLite backend is used | Yes, if using `sqlite`, `ladybug`, or `neo4j` | Persistent storage reached through the gated write path |
 | `MockL3Graph` | Python memory | RAM only | No | Tests / development only |
 
 The important distinction:
 
 ```text
 L1 = persistent working memory / pending layer
-L3 = persistent canonical graph, if configured with a persistent backend
+L3 = persistent physical multi-status graph, if configured with a persistent backend
 ```
 
 ---
@@ -46,11 +46,11 @@ The L1 database contains:
 | `erasure_log` | GDPR Art. 17 deletion tombstones without restoring erased content |
 | `audit_log` | tamper-evident hash-chained compliance events |
 
-L1 is persistent, but L1 is **not automatically canonical truth**. It is the working/pending layer.
+L1 is persistent, but L1 is **not automatically strict Canon**. It is the working/pending layer.
 
 ---
 
-## 3. L3 SQLite graph: persistent canonical memory
+## 3. L3 SQLite graph: persistent multi-status storage
 
 The dependency-free persistent L3 backend is `SqliteL3Graph` in `core/l3_graph.py`.
 
@@ -65,7 +65,7 @@ The SQLite L3 graph stores:
 
 | Table | Purpose |
 |---|---|
-| `nodes` | canonical fact nodes |
+| `nodes` | stored physical-L3 fact nodes across epistemic states |
 | `vectors` | stored vectors / hash embeddings for recall |
 | `edges` | graph relations between facts |
 | `entities` | first-class entity nodes such as people and places |
@@ -76,9 +76,9 @@ If `VELANTRIM_L3_PATH=:memory:` is used, the L3 graph is ephemeral and will not 
 
 ---
 
-## 4. Canonical write path
+## 4. Gated physical-L3 write path
 
-A fact becomes canonical only through the validated pipeline:
+A fact may be persisted to physical L3 through the validated pipeline:
 
 ```text
 Query / Input
@@ -133,7 +133,7 @@ Immutability is a separate rule. Ring Zero / Values Core facts are protected thr
 Current implementation provides:
 
 - persistent L1 working memory through SQLite;
-- persistent L3 canonical graph through `SqliteL3Graph` / optional persistent graph backends;
+- persistent physical L3 multi-status graph through `SqliteL3Graph` / optional persistent graph backends;
 - WAL-enabled SQLite connections for safer concurrent read/write behavior;
 - persistent outbox for self-healing L3 promotion failures;
 - persistent deletion tombstones;
@@ -170,10 +170,10 @@ Still needed for a fuller long-term memory system:
 ```text
 L0 is volatile.
 L1 is persistent working memory.
-L3 is persistent canonical memory only when backed by sqlite/ladybug/neo4j.
+L3 is persistent physical multi-status storage only when backed by sqlite/ladybug/neo4j.
 Mock L3 is not persistent.
 Persistence is not truth.
-Truth requires Guardian + TruthGate + Trace.
+Strict Canon eligibility is derived through the governed read projection; admission or storage alone is insufficient.
 Immutability requires Ring Zero / ImmutableCore.
 ```
 
@@ -182,7 +182,7 @@ Immutability requires Ring Zero / ImmutableCore.
 ## 9. Quick check commands
 
 ```bash
-# Persistent local-first canonical graph
+# Persistent local-first physical L3 graph
 VELANTRIM_L3_BACKEND=sqlite \
 VELANTRIM_L3_PATH=./data/velantrim_l3.db \
 velantrim ask "how does water behave"
@@ -190,7 +190,7 @@ velantrim ask "how does water behave"
 # L1 working memory file
 ls ./data/velantrim_memory.db
 
-# L3 canonical graph file
+# Physical L3 graph file
 ls ./data/velantrim_l3.db
 ```
 
@@ -204,7 +204,7 @@ The current model is:
 
 ```text
 L1 SQLite = persistent working / pending memory
-L3 Graph   = persistent canonical memory when configured with a persistent backend
+L3 Graph   = persistent physical multi-status storage when configured with a persistent backend
 L0 RAM     = temporary process cache
 ```
 
