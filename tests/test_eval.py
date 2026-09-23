@@ -236,7 +236,7 @@ def test_run_baseline_ru_smoke():
     assert 0.0 <= report["receipt_replay_survival"] <= 1.0
 
 
-def test_trigram_beats_word_hashing_on_ru_typo_probes(monkeypatch):
+def test_trigram_beats_word_hashing_on_ru_typo_probes(monkeypatch, tmp_path):
     from core import embedding
     def probe_hits() -> float:
         report = ev.run_baseline(lang="ru", detail=True)
@@ -247,9 +247,12 @@ def test_trigram_beats_word_hashing_on_ru_typo_probes(monkeypatch):
     word_score = probe_hits()
     monkeypatch.setenv("VELANTRIM_EMBEDDER", "hashing-trigram")
     embedding.reset_embedder()
-    # Fresh canon for the second embedder: vectors are not comparable.
+    # Fresh L1 + L3 for the second embedder: vectors are not comparable, and
+    # a persisted Validated label must not be used as surrogate admission
+    # authority to recreate a missing physical-L3 node.
     from core import memory, l3_graph
     memory._L0.clear()
+    monkeypatch.setattr(memory, "SQLITE_PATH", str(tmp_path / "trigram.db"))
     l3_graph.reset_l3_graph()
     trigram_score = probe_hits()
     assert trigram_score > word_score
