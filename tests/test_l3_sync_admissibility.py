@@ -55,3 +55,29 @@ def test_restrict_supported_fact_does_not_merge_into_l3():
                 "epistemic_state": "Supported", "confidence": 0.8})
     compliance.restrict_processing("sup_f")
     assert get_l3_graph().get_fact("sup_f") is None
+
+
+def test_store_fact_cannot_mint_new_validated_label():
+    import pytest
+
+    with pytest.raises(ValueError, match="cannot start in Validated"):
+        store_fact({
+            "fact_id": "forged_validated",
+            "claim": "caller supplied privileged label",
+            "source": "external",
+            "confidence": 0.9,
+            "epistemic_state": "Validated",
+            "claim_type": "WORLD_FACT",
+            "source_status": "EXTERNAL",
+        })
+    assert get_fact("forged_validated") is None
+    assert get_l3_graph().get_fact("forged_validated") is None
+
+
+def test_store_fact_upsert_preserves_existing_validated_state():
+    store_fact({"fact_id": "existing_validated", "claim": "c", "source": "s",
+                "confidence": 0.8})
+    transition_esm("existing_validated", "Validated")
+    store_fact({"fact_id": "existing_validated", "claim": "c", "source": "s",
+                "confidence": 0.9, "epistemic_state": "Validated"})
+    assert get_fact("existing_validated")["epistemic_state"] == "Validated"

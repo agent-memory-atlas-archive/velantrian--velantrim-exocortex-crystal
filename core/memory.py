@@ -751,6 +751,11 @@ def store_fact(fact: Dict) -> None:
                 "SELECT claim, epistemic_state FROM facts WHERE fact_id = ?",
                 (fact_id,),
             ).fetchone()
+            if existing_row is None and epistemic_state == "Validated":
+                raise ValueError(
+                    "store_fact: new facts cannot start in Validated; "
+                    "use the guarded admission/transition path"
+                )
             if existing_row is not None:
                 _assert_claim_identity(
                     fact_id,
