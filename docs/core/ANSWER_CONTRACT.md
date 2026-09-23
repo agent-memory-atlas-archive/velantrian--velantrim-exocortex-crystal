@@ -68,6 +68,6 @@ LLMs may phrase or summarize. They must not upgrade truth status.
 LLM = Voice
 Physical L3 = Multi-status storage
 Strict Canon = Governed trusted read projection
-FactsPack = Evidence
+FactsPack = Candidate/context package (not admitted evidence)
 TruthGate = Admission boundary
 ```
