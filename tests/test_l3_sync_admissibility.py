@@ -19,11 +19,14 @@ def test_l3_secondary_sync_blocks_pre_canonical_states():
         assert l3_secondary_sync_admissible(get_fact(fid)) is False
 
 
-def test_l3_secondary_sync_allows_validated():
+def test_l3_secondary_sync_requires_existing_l3_for_validated():
     store_fact({"fact_id": "val1", "claim": "c", "source": "s",
                 "confidence": 0.8})
     transition_esm("val1", "Validated")
-    assert l3_secondary_sync_admissible(get_fact("val1")) is True
+    fact = get_fact("val1")
+    assert l3_secondary_sync_admissible(fact) is False
+    get_l3_graph().merge_fact(fact)
+    assert l3_secondary_sync_admissible(fact) is True
 
 
 def test_reinforce_on_supported_does_not_merge_into_l3():
