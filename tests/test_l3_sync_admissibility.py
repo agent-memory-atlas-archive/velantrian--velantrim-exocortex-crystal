@@ -57,27 +57,38 @@ def test_restrict_supported_fact_does_not_merge_into_l3():
     assert get_l3_graph().get_fact("sup_f") is None
 
 
-def test_store_fact_cannot_mint_new_validated_label():
-    import pytest
+def test_secondary_sync_rejects_label_only_validated_without_l3_node():
+    store_fact({
+        "fact_id": "label_only_validated",
+        "claim": "caller supplied privileged label",
+        "source": "external",
+        "confidence": 0.9,
+        "epistemic_state": "Validated",
+        "claim_type": "WORLD_FACT",
+        "source_status": "EXTERNAL",
+    })
+    fact = get_fact("label_only_validated")
+    assert fact is not None
+    assert l3_secondary_sync_admissible(fact) is False
+    compliance.restrict_processing("label_only_validated")
+    assert get_l3_graph().get_fact("label_only_validated") is None
 
-    with pytest.raises(ValueError, match="cannot start in Validated"):
-        store_fact({
-            "fact_id": "forged_validated",
-            "claim": "caller supplied privileged label",
-            "source": "external",
-            "confidence": 0.9,
-            "epistemic_state": "Validated",
-            "claim_type": "WORLD_FACT",
-            "source_status": "EXTERNAL",
-        })
-    assert get_fact("forged_validated") is None
-    assert get_l3_graph().get_fact("forged_validated") is None
 
-
-def test_store_fact_upsert_preserves_existing_validated_state():
-    store_fact({"fact_id": "existing_validated", "claim": "c", "source": "s",
+def test_secondary_sync_allows_existing_validated_l3_node():
+    store_fact({"fact_id": "existing_sync", "claim": "c", "source": "s",
                 "confidence": 0.8})
-    transition_esm("existing_validated", "Validated")
-    store_fact({"fact_id": "existing_validated", "claim": "c", "source": "s",
-                "confidence": 0.9, "epistemic_state": "Validated"})
-    assert get_fact("existing_validated")["epistemic_state"] == "Validated"
+    transition_esm("existing_sync", "Validated")
+    fact = get_fact("existing_sync")
+    get_l3_graph().merge_fact(fact)
+    assert l3_secondary_sync_admissible(fact) is True
+
+
+def test_outbox_recovery_can_restore_missing_validated_node_explicitly():
+    store_fact({"fact_id": "recover_validated", "claim": "c", "source": "s",
+                "confidence": 0.8})
+    transition_esm("recover_validated", "Validated")
+    fact = get_fact("recover_validated")
+    assert l3_secondary_sync_admissible(fact) is False
+    assert l3_secondary_sync_admissible(
+        fact, allow_missing_validated_recovery=True
+    ) is True
