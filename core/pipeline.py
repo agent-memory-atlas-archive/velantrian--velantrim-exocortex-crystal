@@ -1159,8 +1159,12 @@ def drain_l3_outbox(graph=None) -> int:
         if fact is None:
             queue.clear(fid)  # the fact vanished from SQLite — drop the stale entry
             continue
-        if not l3_secondary_sync_admissible(fact, graph=graph):
-            queue.clear(fid)  # outbox is for post-gate canon merges only
+        if not l3_secondary_sync_admissible(
+            fact,
+            graph=graph,
+            allow_missing_validated_recovery=True,
+        ):
+            queue.clear(fid)  # outbox is for post-gate recovery only
             continue
         fact["truth_status"] = _truth_status_for(fact.get("claim_type", "WORLD_FACT"), fact.get("source_status"))
         try:

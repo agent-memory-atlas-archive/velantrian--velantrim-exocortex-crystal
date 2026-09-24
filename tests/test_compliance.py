@@ -5,7 +5,7 @@ import pytest
 
 from core.compliance import (
     restrict_processing, unrestrict_processing, is_restricted,
-    restricted_facts, record_of_processing,
+    restricted_facts, record_of_processing, _sync_restriction,
 )
 from core.memory import store_fact, get_fact
 from core.l3_graph import get_l3_graph
@@ -131,3 +131,14 @@ def test_cli_restrict_unrestrict_and_ropa(capsys):
     ropa = json.loads(capsys.readouterr().out.strip())
     assert ropa["fact_count"] >= 1
     assert "data_subject_rights" in ropa
+
+
+def test_sync_restriction_survives_l3_outage(monkeypatch):
+    _seed("sync_outage", "restricted but graph unavailable")
+
+    class BrokenGraph:
+        def merge_fact(self, fact):
+            raise RuntimeError("backend unavailable")
+
+    monkeypatch.setattr("core.compliance.get_l3_graph", lambda: BrokenGraph())
+    assert _sync_restriction("sync_outage") is False

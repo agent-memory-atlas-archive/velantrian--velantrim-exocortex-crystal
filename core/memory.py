@@ -61,15 +61,26 @@ def l3_secondary_sync_admissible(
     fact: Optional[Dict[str, Any]],
     *,
     graph: Any = None,
+    allow_missing_validated_recovery: bool = False,
 ) -> bool:
-    """Return True when a fact may be merged into L3 via a secondary sync path."""
+    """Return True when a fact may be merged through a secondary L3 sync path.
+
+    A bare caller-supplied Validated label is not proof of prior admission.
+    Ordinary secondary sync may update a Validated fact only when its physical
+    L3 node already exists. The sole missing-node exception is explicit outbox
+    recovery after a post-gate L3 write failure.
+    """
     if fact is None:
         return False
     state = fact.get("epistemic_state", "Observed")
     if state in L3_PRE_CANONICAL_STATES:
         return False
     if state == "Validated":
-        return True
+        if allow_missing_validated_recovery:
+            return True
+        from core.l3_graph import get_l3_graph
+        g = graph if graph is not None else get_l3_graph()
+        return g.get_fact(fact["fact_id"]) is not None
     if state in {"Contradicted", "Deprecated", "ImmutableCore"}:
         from core.l3_graph import get_l3_graph
         g = graph if graph is not None else get_l3_graph()

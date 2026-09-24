@@ -49,8 +49,12 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
-def _sync_l3(fact_id: str) -> Optional[Dict[str, Any]]:
-    """Re-merge the fact from SQLite into L3 so the canon reflects the latest state.
+def _sync_l3(
+    fact_id: str,
+    *,
+    allow_missing_validated_admission: bool = False,
+) -> Optional[Dict[str, Any]]:
+    """Re-merge the fact from SQLite into L3 so the graph reflects the latest state.
 
     L1 and L3 do not share a transaction: if the L3 backend fails here, the L1
     update has already happened. Mirror the pipeline's self-heal path — enqueue
@@ -62,7 +66,10 @@ def _sync_l3(fact_id: str) -> Optional[Dict[str, Any]]:
     Contradicted/Deprecated sync only when the node is already in L3.
     """
     fact = get_fact(fact_id)
-    if fact is not None and not l3_secondary_sync_admissible(fact):
+    if fact is not None and not l3_secondary_sync_admissible(
+        fact,
+        allow_missing_validated_recovery=allow_missing_validated_admission,
+    ):
         return fact
     if fact is not None:
         try:
@@ -276,7 +283,7 @@ def supersede(old_id: str, new_fact: Dict[str, Any], *, enforce_gate: bool = Tru
             raise ValueError(f"supersede: new fact rejected by TruthGate: {reason}")
 
     transition_esm(new_id, "Validated")
-    _sync_l3(new_id)
+    _sync_l3(new_id, allow_missing_validated_admission=True)
 
     old = get_fact(old_id)
     if old is not None and old.get("epistemic_state") == "Validated":
