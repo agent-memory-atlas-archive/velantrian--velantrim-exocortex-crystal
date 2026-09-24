@@ -100,7 +100,7 @@ class L3GraphBackend(ABC):
 
     @abstractmethod
     def all_facts(self) -> List[Dict[str, Any]]:
-        """All canonical nodes of the graph."""
+        """All stored physical-L3 nodes across epistemic states."""
 
     @abstractmethod
     def add_edge(

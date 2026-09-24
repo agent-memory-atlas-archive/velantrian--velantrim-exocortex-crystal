@@ -92,7 +92,7 @@ cross-project pattern reuse != code/runtime/authority transfer
 
 ## Exit state for v0.1
 
-If merged after review and CI, the truthful capability statement would be:
+After merge and successful review/CI, the bounded capability state is:
 
 ```text
 bounded_reader_product_bridge_v0_1 = true

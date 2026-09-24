@@ -1241,8 +1241,9 @@ def run(query: str, episode: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     #    transaction. We catch a write failure to L3 and return _blocked, rather than crash
     #    the pipeline with a traceback. Partial state self-heals: failed
     #    facts are put into the outbox (enqueue_l3_write) and idempotently re-merged on the
-    #    next access (drain_l3_outbox, step 0). The source of truth is the graph,
-    #    SQLite is just a pending cache.
+    #    next access (drain_l3_outbox, step 0). SQLite owns operational state;
+    #    physical L3 is the post-admission storage target. Strict grounding authority
+    #    remains the deny-dominant CanonicalView projection, not physical membership.
     graph = get_l3_graph()
     try:
         for fact in facts_pack["facts"]:

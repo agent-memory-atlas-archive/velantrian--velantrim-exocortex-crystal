@@ -212,8 +212,8 @@ _IMMUNE_DDL = """
 # NeuroCore is a plastic adaptation layer that, in later phases, updates an SSM
 # model's weights during a dialogue. Phase 0 is PASSIVE: it only logs the norm of
 # the would-be weight delta (ΔW) when surprise crosses the threshold — it never
-# touches the model and NEVER writes to the L3 graph (invariant I68, Graph =
-# Truth is absolute). This table is the Phase 0 observation log.
+# touches the model and NEVER writes to physical L3 (invariant I68; passive
+# adaptation has no TruthGate or strict-Canon authority). This table is the Phase 0 observation log.
 _NEUROCORE_DDL = """
     CREATE TABLE IF NOT EXISTS neurocore_delta_log (
         id             INTEGER PRIMARY KEY,
