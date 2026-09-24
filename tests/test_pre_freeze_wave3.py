@@ -203,3 +203,22 @@ def test_grant_query_refuses_verified_fact_without_valid_span(monkeypatch):
     )
     result = query_pipeline.query("grant alpha")
     assert result["answer"] is not None
+
+
+def test_lineage_metrics_counts_duplicate_known_lineage():
+    fact = _stored_verified("f3-duplicate-lineage")
+    for idx in range(2):
+        evidence.attach_evidence(
+            fact["fact_id"],
+            f"file://dup-{idx}.txt",
+            source_text=f"dup {idx}",
+            span_start=0,
+            span_end=3,
+            lineage_id="family:duplicate",
+            independence_class="SAME_LINEAGE",
+            lineage_basis="IMPORTER_DECLARED",
+        )
+    metrics = evidence.lineage_metrics([fact["fact_id"]])
+    assert metrics["evidence_count"] == 2
+    assert metrics["unique_lineage_count"] == 1
+    assert metrics["same_lineage_duplicate_rate"] == pytest.approx(0.5)
