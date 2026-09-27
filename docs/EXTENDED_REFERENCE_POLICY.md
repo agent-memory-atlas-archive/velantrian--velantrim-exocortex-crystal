@@ -55,7 +55,7 @@ RC-6 has no truth/Canon/ESM/evidence/planner authority, no contradiction resolut
 
 ## Localization decision
 
-Russian Reader-dependent public/detail surfaces remain `CURRENT` against the immutable RC-5 English checkpoint recorded in `docs/TRANSLATION_STATUS.md` **until the separate RC-6 Russian refresh commit pins the new immutable English RC-6 checkpoint**. Therefore RC-5 `CURRENT` markers are historical checkpoint truth, not a claim that the existing Russian files already contain RC-6 semantics. The eight other supported Reader-dependent locale packs remain `REFRESH_NEEDED`; their prior rich translations are preserved. D2 and Quick Start remain `CURRENT` across all nine locales because RC-6 does not change those source semantics.
+All nine supported locale packs are `CURRENT` for the recorded D1/D3/D4/D5 source checkpoints in `docs/TRANSLATION_STATUS.md`; the executable D5 inventory resolves zero `REFRESH_NEEDED` localized documents at that checkpoint. This is checkpoint-scoped freshness, not a claim of permanent automatic synchronization after future English changes. The V1 lifecycle closure is carried separately by `docs/status/CRYSTAL_V1_LOCALIZATION_OVERLAY_2026-08-22.md`, so lifecycle wording must not be inferred from older per-locale status dates alone. D2 and Quick Start remain governed by their own recorded source contracts.
 
 ## Storage/grant/non-claims
 
