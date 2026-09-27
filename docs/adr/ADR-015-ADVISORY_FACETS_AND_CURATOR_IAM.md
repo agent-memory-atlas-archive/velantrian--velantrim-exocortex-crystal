@@ -1,5 +1,7 @@
 # ADR-015: Advisory topic facets and scoped curator IAM
 
+> **Historical numbering collision.** This merged document is retained for provenance but is **not** the canonical ADR-015 index identity. The canonical ADR-015 is [`ADR-015-ESM_MACHINE_SPEC.md`](./ADR-015-ESM_MACHINE_SPEC.md). Current authenticated curator-write composition is governed by [`ADR-018-AUTHENTICATED_CURATOR_WRITE_COMPOSITION.md`](./ADR-018-AUTHENTICATED_CURATOR_WRITE_COMPOSITION.md), with the public guide in [`../TOPIC_FACETS_AND_CURATOR_IAM.md`](../TOPIC_FACETS_AND_CURATOR_IAM.md). The numbering correction does not change runtime behavior or implementation status.
+
 Status: implemented
 
 ## Context

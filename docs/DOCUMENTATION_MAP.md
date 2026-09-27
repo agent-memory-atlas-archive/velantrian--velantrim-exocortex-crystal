@@ -75,6 +75,7 @@ Machine-readable fields must not be inferred from emojis, diagrams, narrative su
 ## 🧾 Current state and evidence
 
 - [`STATUS.md`](./STATUS.md) — current public implementation/evidence state.
+- [`status/CRYSTAL_V1_LOCALIZATION_OVERLAY_2026-08-22.md`](./status/CRYSTAL_V1_LOCALIZATION_OVERLAY_2026-08-22.md) — localized lifecycle closure overlay for the V1 COMPLETE / FREEZE-STABILITY state.
 - [`IMPLEMENTATION_STATUS.md`](./IMPLEMENTATION_STATUS.md) — detailed capability and non-implementation matrix.
 - [`../TEST_REPORT.md`](../TEST_REPORT.md) — verification evidence and checkpoint interpretation.
 - [`../eval/`](../eval/) — frozen evaluation surfaces, preregistrations and results.
@@ -105,6 +106,8 @@ Key documents:
 - [RC-7 cross-document contract](./architecture/READER_RC7_CROSS_DOCUMENT.md)
 - [RC-8 retrieval decision](./architecture/READER_RC8_RETRIEVAL_DECISION.md)
 - [RC-9 lexical baseline](./architecture/READER_RC9_LEXICAL_BASELINE.md)
+- [RC-10 retrieval-reuse preregistration](./architecture/READER_RC10_RETRIEVAL_REUSE_PREREGISTRATION.md)
+- [Post-RC-10 reassessment](./architecture/READER_POST_RC10_REASSESSMENT.md)
 - [RRTIC-v1 typed inspection contract](./architecture/READER_RETRIEVAL_TYPED_INSPECTION_CONTRACT_V1.md)
 
 ```text
@@ -184,4 +187,16 @@ Always preserve the separation:
 
 ```text
 overview != current state != machine truth != evidence != history
+```
+
+
+## 🏷 Advisory topic facets / curator IAM
+
+- [Topic facets and curator IAM](./TOPIC_FACETS_AND_CURATOR_IAM.md) — public guide for advisory topic metadata and authenticated curator-write composition.
+- [ADR-018 authenticated curator write composition](./adr/ADR-018-AUTHENTICATED_CURATOR_WRITE_COMPOSITION.md) — governing write-authority contract.
+
+```text
+topic facet != evidence
+topic facet != truth
+curator capability != unrestricted authority
 ```

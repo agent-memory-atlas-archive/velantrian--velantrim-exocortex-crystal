@@ -83,7 +83,7 @@ velantrim audit-verify
 
 `invariant-check` scans at-rest state; it is not by itself proof of admission-time rejection.
 The behaviour pins live in executable tests such as `tests/test_truth_gate.py` and
-`tests/test_read_only_query_boundary.py`.
+`tests/test_read_only_query_surfaces.py`.
 
 ## 5. Verify storage and migration boundaries
 
