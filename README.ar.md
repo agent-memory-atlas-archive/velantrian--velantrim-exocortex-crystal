@@ -323,23 +323,40 @@ git clone https://github.com/velantrian/velantrim-exocortex-crystal.git
 cd velantrim-exocortex-crystal
 python -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
 pip install -e '.[dev]'
 pytest tests/ --cov=. --cov-fail-under=100
+python scripts/eval_gate.py --out-dir eval-artifacts
 ```
 
 PostgreSQL اختياري: `pip install -e '.[postgresql]'`.
 
 ## 🧭 أين تذهب بعد ذلك؟
 
-- 👤 [Deep System Overview](./docs/OVERVIEW.md)
-- 🤖 [Special for AI](./docs/ai/README.md)
-- 📊 [Current State for AI](./docs/ai/CURRENT_STATE.md)
-- 🗺️ [Documentation map](./docs/DOCUMENTATION_MAP.md)
-- 📖 [Reader architecture](./docs/architecture/READER_CORE_ARCHITECTURE.md)
-- 🧾 [Status](./docs/STATUS.md)
-- 🧱 [Implementation Status](./docs/IMPLEMENTATION_STATUS.md)
-- 🛡️ [Security](./SECURITY.md)
-- ⚖️ [Governance](./GOVERNANCE.md)
+### 👤 Human overview
+
+- [Deep System Overview](./docs/OVERVIEW.md)
+- [Documentation map](./docs/DOCUMENTATION_MAP.md)
+- [Architecture overview](./docs/ARCHITECTURE_OVERVIEW.md)
+- [Full architecture](./docs/ARCHITECTURE.md)
+
+### 🤖 AI / agents
+
+- [Special for AI](./docs/ai/README.md)
+- [Current State for AI](./docs/ai/CURRENT_STATE.md)
+- [Implementation manifest](./docs/status/implementation-manifest.json)
+- [Status](./docs/STATUS.md) · [Implementation Status](./docs/IMPLEMENTATION_STATUS.md)
+
+### 🔬 Validation / due diligence
+
+- [TEST_REPORT](./TEST_REPORT.md)
+- [Reviewer Guide](./docs/REVIEWER_GUIDE.md)
+- `eval/**`, architecture contracts, and exact GitHub commit / CI evidence
+
+### 🤝 Contribution, security, and license
+
+- [Contributing](./CONTRIBUTING.md) · [Security](./SECURITY.md) · [Governance](./GOVERNANCE.md)
+- [AGPL-3.0 License](./LICENSE)
 
 Localization governance remains explicit:
 

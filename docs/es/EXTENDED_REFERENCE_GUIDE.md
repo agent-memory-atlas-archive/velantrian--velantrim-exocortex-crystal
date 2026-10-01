@@ -148,7 +148,9 @@ NLnet sigue **submitted / under review / not awarded**. Aproximadamente **€50,
 
 No se reivindican security/legal/GDPR certification, native-speaker editorial certification, AGI/consciousness, universal truth, active PostgreSQL runtime, semantic/hybrid/vector Reader runtime, completed dedicated/full Reader ni automatic identity/corroboration/adjudication/evidence admission.
 
-Después de este Spanish milestone, cinco Reader-dependent locale packs permanecen `REFRESH_NEEDED`; German, French, Spanish y Russian son los current localized detail packs. Este documento no modifica ningún otro idioma.
+**Hito histórico (no es el estado actual de traducción):** Después de este Spanish milestone, cinco Reader-dependent locale packs permanecen `REFRESH_NEEDED`; German, French, Spanish y Russian son los current localized detail packs. Este documento no modifica ningún otro idioma.
+
+El [Translation Status Ledger](../TRANSLATION_STATUS.md) contiene el estado general vigente; las cifras del hito anterior se conservan como provenance histórica.
 
 Historical Spanish D5 source: `d5f7f1c4c0908d24f8994e4fbec45c102b9ab7d9`. Current Spanish refresh audit source: `main@bbe6b0d3d90d80b3c669ddab5fc56aa1bfe419eb`.
 

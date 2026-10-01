@@ -149,6 +149,8 @@ NLnet **submitted / under review / not awarded**. Approximately **€50,000** pl
 
 No security/legal/GDPR certification, native-speaker editorial certification, AGI/consciousness, universal truth, active PostgreSQL runtime, semantic/hybrid/vector Reader runtime, completed dedicated/full Reader, automatic identity/corroboration/adjudication/evidence admission is claimed.
 
-Eight non-Russian Reader-dependent locale packs remain `REFRESH_NEEDED`; this Russian refresh does not change them.
+**Historical milestone status (not the current translation inventory):** Eight non-Russian Reader-dependent locale packs remain `REFRESH_NEEDED`; this Russian refresh does not change them.
+
+See the [Translation Status Ledger](../TRANSLATION_STATUS.md) for the current overall status; the count above is retained as historical provenance.
 
 Historical Russian RC-7 source: `main@ab3ad31c437647535030e371d58f456faf14017b`. Current Russian refresh source: `main@9666781d390e3276a111cb5ee1735f6606a76283`.

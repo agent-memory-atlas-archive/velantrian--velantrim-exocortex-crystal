@@ -280,17 +280,44 @@ Crystal निम्न claims नहीं करता:
 - native-speaker editorial certification;
 - NLnet award या approved ~€50k budget।
 
+## 🚀 Quickstart
+
+```bash
+git clone https://github.com/velantrian/velantrim-exocortex-crystal.git
+cd velantrim-exocortex-crystal
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -e '.[dev]'
+python -m pytest -q
+python scripts/eval_gate.py --out-dir eval-artifacts
+```
+
 ## 📚 Navigation
 
-- [Special for AI](./docs/ai/README.md)
+### 👤 Human overview
+
 - [Deep System Overview](./docs/OVERVIEW.md)
 - [Documentation map](./docs/DOCUMENTATION_MAP.md)
-- [Status](./docs/STATUS.md)
-- [Implementation Status](./docs/IMPLEMENTATION_STATUS.md)
-- [Reader architecture](./docs/architecture/READER_CORE_ARCHITECTURE.md)
-- [Localization policy](./docs/LOCALIZATION_POLICY.md)
-- [Translation status](./docs/TRANSLATION_STATUS.md)
-- [Security](./SECURITY.md)
-- [Governance](./GOVERNANCE.md)
+- [Architecture overview](./docs/ARCHITECTURE_OVERVIEW.md)
+- [Full architecture](./docs/ARCHITECTURE.md)
+
+### 🤖 AI / agents
+
+- [Special for AI](./docs/ai/README.md)
+- [Current State for AI](./docs/ai/CURRENT_STATE.md)
+- [Implementation manifest](./docs/status/implementation-manifest.json)
+- [Status](./docs/STATUS.md) · [Implementation Status](./docs/IMPLEMENTATION_STATUS.md)
+
+### 🔬 Validation / due diligence
+
+- [TEST_REPORT](./TEST_REPORT.md)
+- [Reviewer Guide](./docs/REVIEWER_GUIDE.md)
+- `eval/**`, architecture contracts, and exact GitHub commit / CI evidence
+
+### 🌍 Localization, contribution, and governance
+
+- [Localization policy](./docs/LOCALIZATION_POLICY.md) · [Translation status](./docs/TRANSLATION_STATUS.md)
+- [Contributing](./CONTRIBUTING.md) · [Security](./SECURITY.md) · [Governance](./GOVERNANCE.md)
 
 License: [AGPL-3.0](./LICENSE).

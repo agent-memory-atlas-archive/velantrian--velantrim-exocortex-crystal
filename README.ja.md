@@ -366,8 +366,10 @@ git clone https://github.com/velantrian/velantrim-exocortex-crystal.git
 cd velantrim-exocortex-crystal
 python -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
 pip install -e '.[dev]'
 pytest tests/ --cov=. --cov-fail-under=100
+python scripts/eval_gate.py --out-dir eval-artifacts
 ```
 
 Optional PostgreSQL dependency: `pip install -e '.[postgresql]'`。これは backend activation ではありません。
@@ -390,13 +392,28 @@ Crystal は次を主張しません。
 
 ## 🧭 Documentation routes
 
-- 👤 Human overview: [docs/OVERVIEW.md](./docs/OVERVIEW.md)
-- 🤖 Special for AI: [docs/ai/README.md](./docs/ai/README.md)
-- 📊 Current status: [docs/STATUS.md](./docs/STATUS.md)
-- 🧱 Implementation status: [docs/IMPLEMENTATION_STATUS.md](./docs/IMPLEMENTATION_STATUS.md)
-- 🏛 Architecture: [docs/ARCHITECTURE_OVERVIEW.md](./docs/ARCHITECTURE_OVERVIEW.md)
-- 🧾 Evidence: [TEST_REPORT.md](./TEST_REPORT.md)
-- 🌍 Localization policy: [docs/LOCALIZATION_POLICY.md](./docs/LOCALIZATION_POLICY.md)
-- 🌐 Translation status: [docs/TRANSLATION_STATUS.md](./docs/TRANSLATION_STATUS.md)
+### 👤 Human overview
+
+- [Deep System Overview](./docs/OVERVIEW.md)
+- [Architecture overview](./docs/ARCHITECTURE_OVERVIEW.md) · [Full architecture](./docs/ARCHITECTURE.md)
+- [Documentation map](./docs/DOCUMENTATION_MAP.md)
+
+### 🤖 AI / agents / automated auditors
+
+- [Special for AI](./docs/ai/README.md)
+- [Implementation manifest](./docs/status/implementation-manifest.json)
+- [Current status](./docs/STATUS.md) · [Implementation status](./docs/IMPLEMENTATION_STATUS.md)
+
+### 🔬 Validation / due diligence
+
+- [TEST_REPORT](./TEST_REPORT.md) · [Reviewer Guide](./docs/REVIEWER_GUIDE.md)
+- `eval/**`, architecture contracts, and exact GitHub commit / CI evidence
+
+### 🌍 Localization, contribution, and governance
+
+- [Localization policy](./docs/LOCALIZATION_POLICY.md) · [Translation status](./docs/TRANSLATION_STATUS.md)
+- [Roadmap](./ROADMAP.md)
+- [Contributing](./CONTRIBUTING.md) · [Security](./SECURITY.md) · [Governance](./GOVERNANCE.md)
+- [AGPL-3.0 License](./LICENSE)
 
 > 英語版が primary/source language です。Japanese `CURRENT` は recorded technical parity を意味し、native-speaker editorial certification を意味しません。

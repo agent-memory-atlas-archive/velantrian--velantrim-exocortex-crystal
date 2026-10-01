@@ -132,7 +132,9 @@ NLnet NGI0 Commons Fund: **submitted / under review / not awarded**。約 **€5
 `REFRESH_NEEDED` = translation 自体は有用だが Reader-dependent semantics が現在の source に遅れている状態。  
 どちらも native-speaker editorial certification ではありません。
 
-Japanese はこの refresh 後 `CURRENT`。残る Reader-dependent root/detail refresh backlog は Arabic と Hindi です。
+**歴史的な Japanese refresh 時点の状態（現在の全体 inventory ではありません）:** Japanese はこの refresh 後 `CURRENT`。残る Reader-dependent root/detail refresh backlog は Arabic と Hindi です。
+
+現在の翻訳 freshness / inventory は [Translation Status Ledger](../TRANSLATION_STATUS.md) を参照してください。上の scope は当時の checkpoint として保持しています。
 
 ## 🚫 Non-claims
 
