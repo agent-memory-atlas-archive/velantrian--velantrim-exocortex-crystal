@@ -217,6 +217,19 @@ candidate discovery != candidate adjudication
 
 أي retrieval أو ranking أو similarity أو NLI أو RRTIC diagnostic يبقى خارج evidence admission إلى أن يمر عبر المسار المصرح به.
 
+## 🧠 كيف يختلف Crystal عن أنماط الذاكرة والاسترجاع الشائعة
+
+هذا جدول لتحديد التموضع المعماري، لا لترتيب الأنظمة. قد تعالج أنظمة مختلفة طبقات مختلفة من المشكلة الأوسع نفسها.
+
+| النهج | التركيز الأساسي | ما يختلف في تركيز Crystal |
+|---|---|---|
+| 📦 الاسترجاع الكلاسيكي بالمتجهات (Classic vector RAG) | استرجاع سياق ذي صلة لتوليد الإجابة | تبقى الصلة منفصلة عن الدليل والهوية وسلطة Canon |
+| 🧠 أنظمة ذاكرة الوكلاء (agent memory systems) | الحفاظ على سياق مفيد للوكيل أو المستخدم | provenance وحدود admission وانتقالات حالة موثوقة قابلة للتدقيق |
+| 🕸 أنظمة الذاكرة البيانية / الزمنية (graph / temporal-memory systems) | تمثيل العلاقات والسياق المتطور بمرور الوقت | تظل العلاقات المكتشفة مرشحات حتى استيفاء متطلبات السلطة الصريحة |
+| 💠 Crystal | ذاكرة محلية أولاً قائمة على الأدلة وحدود Reader | فصل الحالة الموثوقة، وسلطة آمنة عند الرفض، وتمييز صريح بين البحث وruntime |
+
+الأنظمة الخارجية تتطور. توجد المقارنات المؤرخة والمرتبطة بمصادر في [Deep System Overview](./docs/OVERVIEW.md)؛ وتتجنب هذه الصفحة تحويل خصائص منتجات أخرى المتغيرة إلى حقائق دائمة عن المشروع.
+
 ## 🏛️ L0 / L1 / L2 / L3
 
 | السطح | الدور | ما لا يعنيه |
@@ -333,27 +346,27 @@ PostgreSQL اختياري: `pip install -e '.[postgresql]'`.
 
 ## 🧭 أين تذهب بعد ذلك؟
 
-### 👤 Human overview
+### 👤 نظرة عامة للقراء
 
 - [Deep System Overview](./docs/OVERVIEW.md)
 - [Documentation map](./docs/DOCUMENTATION_MAP.md)
 - [Architecture overview](./docs/ARCHITECTURE_OVERVIEW.md)
 - [Full architecture](./docs/ARCHITECTURE.md)
 
-### 🤖 AI / agents
+### 🤖 الذكاء الاصطناعي / الوكلاء
 
 - [Special for AI](./docs/ai/README.md)
 - [Current State for AI](./docs/ai/CURRENT_STATE.md)
 - [Implementation manifest](./docs/status/implementation-manifest.json)
 - [Status](./docs/STATUS.md) · [Implementation Status](./docs/IMPLEMENTATION_STATUS.md)
 
-### 🔬 Validation / due diligence
+### 🔬 التحقق / العناية الواجبة
 
 - [TEST_REPORT](./TEST_REPORT.md)
 - [Reviewer Guide](./docs/REVIEWER_GUIDE.md)
 - `eval/**`, architecture contracts, and exact GitHub commit / CI evidence
 
-### 🤝 Contribution, security, and license
+### 🤝 المساهمة والأمن والترخيص
 
 - [Contributing](./CONTRIBUTING.md) · [Security](./SECURITY.md) · [Governance](./GOVERNANCE.md)
 - [AGPL-3.0 License](./LICENSE)

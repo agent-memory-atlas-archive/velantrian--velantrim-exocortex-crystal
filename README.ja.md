@@ -250,6 +250,19 @@ evaluation pass != runtime authorization
 physical L3 != strict Canon
 ```
 
+## 🧠 一般的なメモリ／検索方式と Crystal の違い
+
+これはアーキテクチャ上の位置づけを示す表であり、性能ランキングではありません。異なるシステムが、同じ大きな課題の異なる層を担うことがあります。
+
+| アプローチ | 主な重点 | Crystal が異なる点 |
+|---|---|---|
+| 📦 従来型のベクトル RAG (Classic vector RAG) | 生成のために関連コンテキストを検索する | 関連性は evidence、identity、Canon authority とは分離される |
+| 🧠 エージェント・メモリシステム (agent memory systems) | agent/user に役立つ context を保持する | provenance、admission boundary、監査可能な trusted-state transition |
+| 🕸 グラフ／時間的メモリシステム (graph / temporal-memory systems) | relationship と変化する context を表現する | 発見された関係は、明示的な authority 要件を満たすまで candidate のまま |
+| 💠 Crystal | evidence-first の local memory と Reader boundary | local-first の信頼状態分離、deny-safe authority、research と runtime の明示的な区別 |
+
+外部システムは進化します。日付と source link を伴う比較の背景は [Deep System Overview](./docs/OVERVIEW.md) にまとめています。この README は変化する第三者製品の仕様を恒久的なプロジェクト事実として扱いません。
+
 Historical compatibility の executable literal も保持します。
 
 ```text
@@ -390,26 +403,26 @@ Crystal は次を主張しません。
 - legal / security / GDPR certification;
 - NLnet award or committed funding.
 
-## 🧭 Documentation routes
+## 🧭 ドキュメント案内
 
-### 👤 Human overview
+### 👤 人向け概要
 
 - [Deep System Overview](./docs/OVERVIEW.md)
 - [Architecture overview](./docs/ARCHITECTURE_OVERVIEW.md) · [Full architecture](./docs/ARCHITECTURE.md)
 - [Documentation map](./docs/DOCUMENTATION_MAP.md)
 
-### 🤖 AI / agents / automated auditors
+### 🤖 AI・エージェント・自動監査向け
 
 - [Special for AI](./docs/ai/README.md)
 - [Implementation manifest](./docs/status/implementation-manifest.json)
 - [Current status](./docs/STATUS.md) · [Implementation status](./docs/IMPLEMENTATION_STATUS.md)
 
-### 🔬 Validation / due diligence
+### 🔬 検証・デューデリジェンス
 
 - [TEST_REPORT](./TEST_REPORT.md) · [Reviewer Guide](./docs/REVIEWER_GUIDE.md)
 - `eval/**`, architecture contracts, and exact GitHub commit / CI evidence
 
-### 🌍 Localization, contribution, and governance
+### 🌍 ローカライズ・貢献・ガバナンス
 
 - [Localization policy](./docs/LOCALIZATION_POLICY.md) · [Translation status](./docs/TRANSLATION_STATUS.md)
 - [Roadmap](./ROADMAP.md)

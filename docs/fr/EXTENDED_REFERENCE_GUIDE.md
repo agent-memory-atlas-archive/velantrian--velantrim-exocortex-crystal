@@ -148,7 +148,7 @@ NLnet reste **submitted / under review / not awarded**. Environ **€50,000** es
 
 Aucune security/legal/GDPR certification, native-speaker editorial certification, AGI/consciousness, universal truth, active PostgreSQL runtime, semantic/hybrid/vector Reader runtime, completed dedicated/full Reader ou automatic identity/corroboration/adjudication/evidence admission n’est revendiquée.
 
-**Jalon historique (pas l’état actuel des traductions) :** Après ce French milestone, six Reader-dependent locale packs restent `REFRESH_NEEDED`; German, French et Russian sont les current localized detail packs. Ce document ne modifie aucune autre langue.
+**Jalon historique (checkpoint daté du 2026-08-15 ; pas l’état actuel des traductions) :** Après ce French milestone, six Reader-dependent locale packs restent `REFRESH_NEEDED`; German, French et Russian sont les current localized detail packs. Ce document ne modifie aucune autre langue.
 
 Le [Translation Status Ledger](../TRANSLATION_STATUS.md) donne l’état global actuel ; les chiffres du jalon ci-dessus sont conservés comme provenance historique.
 
