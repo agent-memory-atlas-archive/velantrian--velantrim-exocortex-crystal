@@ -147,7 +147,9 @@ NLnet bleibt **submitted / under review / not awarded**. Ungefähr **€50,000**
 
 Es wird keine security/legal/GDPR certification, native-speaker editorial certification, AGI/consciousness, universal truth, active PostgreSQL runtime, semantic/hybrid/vector Reader runtime, completed dedicated/full Reader oder automatic identity/corroboration/adjudication/evidence admission behauptet.
 
-Nach diesem German milestone bleiben sieben Reader-dependent locale packs `REFRESH_NEEDED`; Russian und German sind die current localized detail packs. Dieses Dokument ändert keine andere Sprache.
+**Historischer Meilenstein (Stichtag: 2026-08-15; kein aktueller Übersetzungsstatus):** Nach diesem German milestone bleiben sieben Reader-dependent locale packs `REFRESH_NEEDED`; Russian und German sind die current localized detail packs. Dieses Dokument ändert keine andere Sprache.
+
+Den aktuellen Gesamtstatus enthält das [Translation Status Ledger](../TRANSLATION_STATUS.md); die Meilensteinzahlen oben sind historische Provenienz.
 
 Historischer deutscher D5 source: `d5f7f1c4c0908d24f8994e4fbec45c102b9ab7d9`. Current German refresh audit source: `main@ad8cec8c868f64b6dfbdc3bf3087230f59c3861c`.
 

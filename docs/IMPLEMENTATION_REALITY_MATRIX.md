@@ -1,8 +1,8 @@
 # Implementation Reality Matrix
 
 > Date: 2026-08-01
-> Scope: current implementation/status matrix for public Crystal planning
-> Status: docs-only. Canonical detailed audit matrix. `docs/STATUS.md` carries the high-level summary; `docs/IMPLEMENTATION_STATUS.md` is the component-level implemented/RFC/vision map.
+> Scope: implementation/status matrix as recorded on 2026-08-01; historical snapshot, not current planning authority
+> Status: docs-only. Canonical detailed audit matrix for that dated snapshot. `docs/STATUS.md` carries the high-level summary; `docs/IMPLEMENTATION_STATUS.md` is the component-level implemented/RFC/vision map.
 
 ## Legend
 
@@ -16,7 +16,7 @@
 | `LEGACY` | historical material retained for context |
 | `NEEDS_VERIFICATION` | audit finding requires code/test confirmation |
 
-## Current Track Plan
+## Historical Track Plan — superseded (2026-08-01 snapshot)
 
 ```text
 Track 1  — ProvenanceChain per-fact event chain

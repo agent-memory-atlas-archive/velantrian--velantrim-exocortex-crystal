@@ -132,7 +132,9 @@ NLnet NGI0 Commons Fund：**submitted / under review / not awarded**。约 **€
 `REFRESH_NEEDED` = translation remains useful but its Reader-dependent semantics lag the current source。  
 这些状态都不等于 native-speaker editorial certification。
 
-Simplified Chinese 本页完成刷新后进入 `CURRENT`；仍需刷新的是 Arabic、Hindi、Japanese Reader-dependent root/detail surfaces。
+**历史里程碑状态（截至 2026-08-15；不是当前总体 inventory）：** Simplified Chinese 本页完成刷新后进入 `CURRENT`；仍需刷新的是 Arabic、Hindi、Japanese Reader-dependent root/detail surfaces。
+
+当前整体翻译 freshness / inventory 请查阅[翻译状态台账](../TRANSLATION_STATUS.md)；上面的 scope 作为历史 checkpoint 保留。
 
 ## 🚫 Non-claims
 

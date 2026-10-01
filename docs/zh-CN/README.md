@@ -25,7 +25,7 @@
 
 ## 📎 Historical localization compatibility
 
-在历史 RC-6 localization checkpoint 中，简体中文 Reader-dependent 文档属于 `REFRESH_NEEDED`。这个 literal 仅作为旧的 executable provenance/compatibility evidence 保留；它**不是当前 freshness state**。当前状态由上方 D1/D3/D4/D5 `CURRENT` markers、machine manifests 与 translation ledger 决定。
+在历史 RC-6 localization checkpoint 中，简体中文 Reader-dependent 文档属于 `REFRESH_NEEDED`。这个 literal 仅作为旧的 executable provenance/compatibility evidence 保留；它**不是当前 freshness state**。上方 D1/D3/D4/D5 `CURRENT` markers 与 source hashes 是 checkpoint/provenance metadata，不是 live implementation truth。Locale freshness / inventory 请以 [translation ledger](../TRANSLATION_STATUS.md) 为准；current technical truth 仍须依据 merged implementation、executable tests、exact CI、current English contracts 与 machine-readable implementation manifest。
 
 ## 🧠 当前 Reader 事实
 

@@ -205,6 +205,19 @@ semantic_hybrid_reader_runtime=false
 - **CanonicalView** strict trusted read-time projection है।
 - TRACE / provenance auditability देता है; provenance proof of truth नहीं है।
 
+## 🧠 सामान्य memory और retrieval तरीकों से Crystal कैसे अलग है
+
+यह architectural positioning तालिका है, leaderboard नहीं। अलग-अलग प्रणालियाँ एक ही व्यापक समस्या की अलग परतें हल कर सकती हैं।
+
+| दृष्टिकोण | मुख्य जोर | Crystal का अलग जोर |
+|---|---|---|
+| 📦 पारंपरिक vector RAG (Classic vector RAG) | generation के लिए relevant context पुनर्प्राप्त करना | relevance, evidence, identity और Canon authority से अलग रहती है |
+| 🧠 एजेंट मेमोरी प्रणालियाँ (agent memory systems) | उपयोगी agent/user context बनाए रखना | provenance, admission boundaries और auditable trusted-state transitions |
+| 🕸 ग्राफ / समय-आधारित मेमोरी प्रणालियाँ (graph / temporal-memory systems) | relationships और बदलते context को दर्शाना | खोजे गए संबंध तब तक candidates रहते हैं जब तक explicit authority requirements पूरी न हों |
+| 💠 Crystal | evidence-first local memory + Reader boundaries | local-first trusted-state separation, deny-safe authority और research/runtime का स्पष्ट भेद |
+
+बाहरी प्रणालियाँ समय के साथ बदलती हैं। दिनांकित, source-linked तुलना [Deep System Overview](./docs/OVERVIEW.md) में है; यह README बदलते third-party products को स्थायी project truth नहीं बनाता।
+
 Public read-only surfaces:
 
 ```text
@@ -218,6 +231,28 @@ strict read-only canonical projection
 ```
 
 ये surfaces facts create नहीं करतीं, ESM mutate नहीं करतीं और L3 में write नहीं करतीं। Explicit ingest अलग write path है।
+
+## ⚖️ विरोधाभास पर निर्णय
+
+```text
+अनसुलझा विरोधाभास
+        ↓
+ContradictionReport
+        ↓
+सीमित दायरे वाला curator + capability + lease
+        ↓
+COEXIST / CONTEXTUALIZE / SUPERSEDE
+        ↓
+audited canonical write path
+```
+
+कोई स्वतः winner नहीं चुना जाता। Curator अपने दायरे की capability और lease के भीतर जवाबदेह actor तथा reason के साथ एक स्पष्ट disposition चुनता है; निर्णय audited canonical write path से लागू होता है।
+
+- `COEXIST` — अलग contexts में लागू दावों को साथ रहने देना।
+- `CONTEXTUALIZE` — दावों के अलग contexts को स्पष्ट करना, न कि किसी एक को स्वतः विजेता मानना।
+- `SUPERSEDE` — supersede करने के लिए चुने गए canonical facts को explicit targets के रूप में निर्दिष्ट करना।
+
+विवरण: [conflict-resolution surfaces](./docs/CONFLICT_RESOLUTION_SURFACES.md) और [curator authorization तथा lease](./docs/TOPIC_FACETS_AND_CURATOR_IAM.md)।
 
 ## 🗄️ Storage reality
 
@@ -280,17 +315,44 @@ Crystal निम्न claims नहीं करता:
 - native-speaker editorial certification;
 - NLnet award या approved ~€50k budget।
 
-## 📚 Navigation
+## 🚀 Quickstart
 
-- [Special for AI](./docs/ai/README.md)
+```bash
+git clone https://github.com/velantrian/velantrim-exocortex-crystal.git
+cd velantrim-exocortex-crystal
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -e '.[dev]'
+python -m pytest -q
+python scripts/eval_gate.py --out-dir eval-artifacts
+```
+
+## 📚 आगे पढ़ने के लिए
+
+### 👤 मानव पाठकों के लिए परिचय
+
 - [Deep System Overview](./docs/OVERVIEW.md)
 - [Documentation map](./docs/DOCUMENTATION_MAP.md)
-- [Status](./docs/STATUS.md)
-- [Implementation Status](./docs/IMPLEMENTATION_STATUS.md)
-- [Reader architecture](./docs/architecture/READER_CORE_ARCHITECTURE.md)
-- [Localization policy](./docs/LOCALIZATION_POLICY.md)
-- [Translation status](./docs/TRANSLATION_STATUS.md)
-- [Security](./SECURITY.md)
-- [Governance](./GOVERNANCE.md)
+- [Architecture overview](./docs/ARCHITECTURE_OVERVIEW.md)
+- [Full architecture](./docs/ARCHITECTURE.md)
+
+### 🤖 AI / एजेंट
+
+- [Special for AI](./docs/ai/README.md)
+- [Current State for AI](./docs/ai/CURRENT_STATE.md)
+- [Implementation manifest](./docs/status/implementation-manifest.json)
+- [Status](./docs/STATUS.md) · [Implementation Status](./docs/IMPLEMENTATION_STATUS.md)
+
+### 🔬 सत्यापन / due diligence
+
+- [TEST_REPORT](./TEST_REPORT.md)
+- [Reviewer Guide](./docs/REVIEWER_GUIDE.md)
+- `eval/**`, architecture contracts, and exact GitHub commit / CI evidence
+
+### 🌍 स्थानीयकरण, योगदान और शासन
+
+- [Localization policy](./docs/LOCALIZATION_POLICY.md) · [Translation status](./docs/TRANSLATION_STATUS.md)
+- [Contributing](./CONTRIBUTING.md) · [Security](./SECURITY.md) · [Governance](./GOVERNANCE.md)
 
 License: [AGPL-3.0](./LICENSE).
