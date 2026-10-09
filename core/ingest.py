@@ -18,7 +18,7 @@ from typing import Dict, Any, Optional
 from core.memory import (
     store_fact,
     get_fact,
-    transition_esm,
+    transition_esm_if_unchanged,
     ClaimIdentityError,
     TerminalStateError,
     IngestStateChangedError,
@@ -323,10 +323,11 @@ def ingest(
         prior.get("epistemic_state", "Observed") if prior is not None else None
     )
     try:
-        store_fact(
+        persisted_fact = store_fact(
             fact,
             expected_state=expected_state,
             reject_terminal=True,
+            return_persisted=True,
         )
     except TerminalStateError as exc:
         raise IngestError(
@@ -340,6 +341,13 @@ def ingest(
         ) from exc
     if not explicit_fact_id:
         _refresh_normalized_ingest_index_after_success(utterance)
+
+    # Guardian and TruthGate must see the exact row committed by store_fact,
+    # including its persisted revision and normalized/defaulted gate fields.
+    # Keep transient truth_status out of L1 and out of the persisted snapshot.
+    assert persisted_fact is not None, "store_fact must return its persisted snapshot"
+    fact = persisted_fact
+    fact["truth_status"] = "UNVERIFIED"
 
     # Immune pre-screen (RFC0072): block claims matching the CRISPR threat memory
     # — known hallucination / harmful / previously-refuted patterns — BEFORE the
@@ -390,21 +398,21 @@ def ingest(
             "conflicts": conflicts, "fact": fact,
         }
 
-    # Passed the gates → Validated, truth_status by modality, MERGE into the L3 canon.
-    # CAS guard: if the persisted state changed under us (a competing writer),
-    # transition_esm returns False and evicts the stale L0 entry. Abort the
-    # promotion instead of merging a stale payload / recording success.
-    # Defense-in-depth, not a full atomicity guarantee.
-    if not transition_esm(fid, "Validated"):
+    # Passed the gates → attempt a claim-version-bound Validated promotion.
+    # This short transaction re-checks the persisted identity, revision, state,
+    # and gate inputs atomically; no SQLite write lock is held during the gates.
+    promoted_fact = transition_esm_if_unchanged(fact, "Validated")
+    if promoted_fact is None:
         adaptation.record_block()
         return {
             "accepted": False,
-            "reason": "ESM CAS conflict: fact state changed concurrently; not promoted",
+            "reason": (
+                "ESM CAS conflict: persisted claim version changed; "
+                "not promoted"
+            ),
             "conflicts": conflicts, "fact": fact,
         }
-    updated = get_fact(fid)
-    if updated:
-        fact["epistemic_state"] = updated["epistemic_state"]
+    fact = promoted_fact
     fact["truth_status"] = _truth_status_for(ct, source_status)
 
     graph = get_l3_graph()
