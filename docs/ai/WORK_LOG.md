@@ -78,3 +78,10 @@ Signed merge `f8b7d7ea36625b6589a4cf02f12b94c5f98fdb61`; exact-head CI `31593097
 ## Historical retained evidence
 
 Earlier RC-0..RC-8, storage, localization and grant-reconciliation entries remain available in Git history and their signed/CI evidence remains preserved in status and architecture records.
+
+
+## 2026-10-18 — PR #493 bounded completeness review
+
+Reviewed the derived normalized-ingest index generation/completeness protocol and its write-side hooks; see `docs/NORMALIZED_INGEST_INDEX.md`. Replaced fixed-name SQL f-strings with literal SQL while retaining bound data parameters, so Bandit can verify the same static boundary without suppressions.
+
+Local Python 3.12 validation with repository development dependencies: 2,453 passed / 13 skipped, 100.00% coverage (13,074 statements); focused identity/index tests 55 passed; prescribed Ruff scope and focused Bandit passed. These local results are not a hosted-CI or production claim. Exact published head/CI are recorded in PR #493. Authority ownership and runtime authorization do not change. Documentation impact: GITHUB_ONLY (existing internal derived-cache implementation and review evidence).

@@ -75,15 +75,15 @@ _FACT_TRIGGERS = {
 }
 _MAPPING_TRIGGERS = {
     "normalized_ingest_mapping_ai": f"""
-        CREATE TRIGGER normalized_ingest_mapping_ai AFTER INSERT ON {_INDEX_TABLE}
+        CREATE TRIGGER normalized_ingest_mapping_ai AFTER INSERT ON normalized_ingest_index
         BEGIN {_invalidate_sql()}; END
     """,
     "normalized_ingest_mapping_au": f"""
-        CREATE TRIGGER normalized_ingest_mapping_au AFTER UPDATE ON {_INDEX_TABLE}
+        CREATE TRIGGER normalized_ingest_mapping_au AFTER UPDATE ON normalized_ingest_index
         BEGIN {_invalidate_sql()}; END
     """,
     "normalized_ingest_mapping_ad": f"""
-        CREATE TRIGGER normalized_ingest_mapping_ad AFTER DELETE ON {_INDEX_TABLE}
+        CREATE TRIGGER normalized_ingest_mapping_ad AFTER DELETE ON normalized_ingest_index
         BEGIN {_invalidate_sql()}; END
     """,
 }
@@ -104,23 +104,23 @@ def _create_state_storage(conn) -> None:
     """Install versioned generation state and facts-write invalidation triggers."""
     state_type = _object_type(conn, _STATE_TABLE)
     if state_type == "view":
-        conn.execute(f"DROP VIEW {_STATE_TABLE}")
+        conn.execute("DROP VIEW normalized_ingest_index_state")
     elif state_type == "index":
-        conn.execute(f"DROP INDEX {_STATE_TABLE}")
+        conn.execute("DROP INDEX normalized_ingest_index_state")
     elif state_type == "trigger":
-        conn.execute(f"DROP TRIGGER {_STATE_TABLE}")
+        conn.execute("DROP TRIGGER normalized_ingest_index_state")
     if _object_type(conn, _STATE_TABLE) == "table":
         columns = [row["name"] for row in conn.execute(
-            f"PRAGMA table_info({_STATE_TABLE})"
+            "PRAGMA table_info(normalized_ingest_index_state)"
         )]
         if columns != [
             "state_id", "protocol_version", "generation",
             "covered_generation", "complete",
         ]:
-            conn.execute(f"DROP TABLE {_STATE_TABLE}")
+            conn.execute("DROP TABLE normalized_ingest_index_state")
     conn.execute(_STATE_DDL.replace("CREATE TABLE ", "CREATE TABLE IF NOT EXISTS ", 1))
     conn.execute(
-        f"INSERT OR IGNORE INTO {_STATE_TABLE} "
+        "INSERT OR IGNORE INTO normalized_ingest_index_state "
         "(state_id, protocol_version, generation, covered_generation, complete) "
         "VALUES (1, ?, 0, -1, 0)",
         (_PROTOCOL_VERSION,),
@@ -150,7 +150,7 @@ def _index_columns(conn) -> list[str]:
     if _object_type(conn, _INDEX_TABLE) != "table":
         return []
     return [row["name"] for row in conn.execute(
-        f"PRAGMA table_info({_INDEX_TABLE})"
+        "PRAGMA table_info(normalized_ingest_index)"
     )]
 
 
@@ -158,35 +158,35 @@ def _ensure_index_storage(conn) -> None:
     _create_state_storage(conn)
     object_type = _object_type(conn, _INDEX_TABLE)
     if object_type == "view":
-        conn.execute(f"DROP VIEW {_INDEX_TABLE}")
+        conn.execute("DROP VIEW normalized_ingest_index")
         object_type = None
     elif object_type == "index":
-        conn.execute(f"DROP INDEX {_INDEX_TABLE}")
+        conn.execute("DROP INDEX normalized_ingest_index")
         object_type = None
     elif object_type == "trigger":
-        conn.execute(f"DROP TRIGGER {_INDEX_TABLE}")
+        conn.execute("DROP TRIGGER normalized_ingest_index")
         object_type = None
     if object_type == "table" and _index_columns(conn) != [
         "fact_id", "normalized_id", "fact_revision",
     ]:
         # This is disposable derived routing data; fact identity and all
         # authoritative tables are untouched. Rebuild below repopulates it.
-        conn.execute(f"UPDATE {_STATE_TABLE} SET complete = 0 WHERE state_id = 1")
-        conn.execute(f"DROP TABLE {_INDEX_TABLE}")
+        conn.execute("UPDATE normalized_ingest_index_state SET complete = 0 WHERE state_id = 1")
+        conn.execute("DROP TABLE normalized_ingest_index")
         object_type = None
     if object_type is None:
         conn.execute(_INDEX_DDL)
     indexes = {
         row["name"]: row for row in conn.execute(
-            f"PRAGMA index_list({_INDEX_TABLE})"
+            "PRAGMA index_list(normalized_ingest_index)"
         )
     }
     if _LOOKUP_INDEX in indexes:
         columns = [row["name"] for row in conn.execute(
-            f"PRAGMA index_info({_LOOKUP_INDEX})"
+            "PRAGMA index_info(idx_normalized_ingest_id)"
         )]
         if columns != ["normalized_id"]:
-            conn.execute(f"DROP INDEX {_LOOKUP_INDEX}")
+            conn.execute("DROP INDEX idx_normalized_ingest_id")
     conn.execute(_LOOKUP_DDL.replace("CREATE INDEX ", "CREATE INDEX IF NOT EXISTS ", 1))
     _install_triggers(conn, _MAPPING_TRIGGERS)
 
@@ -198,7 +198,7 @@ def _structure_is_valid(conn) -> bool:
         if _object_type(conn, _INDEX_TABLE) != "table":
             return False
         state_columns = [row["name"] for row in conn.execute(
-            f"PRAGMA table_info({_STATE_TABLE})"
+            "PRAGMA table_info(normalized_ingest_index_state)"
         )]
         if state_columns != [
             "state_id", "protocol_version", "generation",
@@ -206,7 +206,7 @@ def _structure_is_valid(conn) -> bool:
         ]:
             return False
         index_info = conn.execute(
-            f"PRAGMA table_info({_INDEX_TABLE})"
+            "PRAGMA table_info(normalized_ingest_index)"
         ).fetchall()
         if [row["name"] for row in index_info] != [
             "fact_id", "normalized_id", "fact_revision",
@@ -219,7 +219,7 @@ def _structure_is_valid(conn) -> bool:
             (_LOOKUP_INDEX,),
         ).fetchone()
         if index_row is None or [row["name"] for row in conn.execute(
-            f"PRAGMA index_info({_LOOKUP_INDEX})"
+            "PRAGMA index_info(idx_normalized_ingest_id)"
         )] != ["normalized_id"]:
             return False
         expected = {**_FACT_TRIGGERS, **_MAPPING_TRIGGERS}
@@ -243,8 +243,8 @@ def is_complete(conn) -> bool:
         return False
     try:
         row = conn.execute(
-            f"SELECT protocol_version, generation, covered_generation, complete "
-            f"FROM {_STATE_TABLE} WHERE state_id = 1"
+            "SELECT protocol_version, generation, covered_generation, complete "
+            "FROM normalized_ingest_index_state WHERE state_id = 1"
         ).fetchone()
         return bool(
             row is not None
@@ -260,7 +260,7 @@ def _mark_incomplete(conn) -> None:
     try:
         if _object_type(conn, _STATE_TABLE) == "table":
             conn.execute(
-                f"UPDATE {_STATE_TABLE} SET complete = 0 WHERE state_id = 1"
+                "UPDATE normalized_ingest_index_state SET complete = 0 WHERE state_id = 1"
             )
     except sqlite3.Error:
         # The trigger-invalidated generation remains the primary fail-closed
@@ -272,15 +272,15 @@ def _mark_incomplete(conn) -> None:
 def _upsert_fact_mapping(conn, fact_id: str) -> None:
     row = conn.execute(
         "SELECT fact_id, claim, revision FROM facts WHERE fact_id = ? "
-        "AND " + _ELIGIBLE,
+        "AND epistemic_state = 'Validated' AND restricted = 0 AND fact_id GLOB 'ing:[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]'",
         (fact_id,),
     ).fetchone()
     if row is None:
-        conn.execute(f"DELETE FROM {_INDEX_TABLE} WHERE fact_id = ?", (fact_id,))
+        conn.execute("DELETE FROM normalized_ingest_index WHERE fact_id = ?", (fact_id,))
         return
     plain_claim = crypto.decrypt(row["claim"])
     conn.execute(
-        f"INSERT INTO {_INDEX_TABLE} (fact_id, normalized_id, fact_revision) "
+        "INSERT INTO normalized_ingest_index (fact_id, normalized_id, fact_revision) "
         "VALUES (?, ?, ?) ON CONFLICT(fact_id) DO UPDATE SET "
         "normalized_id = excluded.normalized_id, "
         "fact_revision = excluded.fact_revision",
@@ -308,8 +308,8 @@ def refresh_facts_after_write(
             _mark_incomplete(conn)
             return
         state = conn.execute(
-            f"SELECT generation, covered_generation, complete "
-            f"FROM {_STATE_TABLE} WHERE state_id = 1"
+            "SELECT generation, covered_generation, complete "
+            "FROM normalized_ingest_index_state WHERE state_id = 1"
         ).fetchone()
         if (
             state is not None
@@ -323,7 +323,7 @@ def refresh_facts_after_write(
         for fact_id in dict.fromkeys(fact_ids):
             _upsert_fact_mapping(conn, fact_id)
         conn.execute(
-            f"UPDATE {_STATE_TABLE} SET complete = 1, "
+            "UPDATE normalized_ingest_index_state SET complete = 1, "
             "covered_generation = generation WHERE state_id = 1 "
             "AND protocol_version = ?",
             (_PROTOCOL_VERSION,),
@@ -337,20 +337,20 @@ def refresh_facts_after_write(
 def _ensure_index_storage_and_dirty(conn) -> None:
     _ensure_index_storage(conn)
     conn.execute(
-        f"UPDATE {_STATE_TABLE} SET complete = 0 WHERE state_id = 1"
+        "UPDATE normalized_ingest_index_state SET complete = 0 WHERE state_id = 1"
     )
 
 
 def _rebuild_conn(conn) -> int:
     _ensure_index_storage_and_dirty(conn)
-    conn.execute(f"DELETE FROM {_INDEX_TABLE}")
+    conn.execute("DELETE FROM normalized_ingest_index")
     rows = conn.execute(
-        "SELECT fact_id, claim, revision FROM facts WHERE " + _ELIGIBLE +
+        "SELECT fact_id, claim, revision FROM facts WHERE epistemic_state = 'Validated' AND restricted = 0 AND fact_id GLOB 'ing:[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]'"
         " ORDER BY created_at, fact_id"
     ).fetchall()
     for row in rows:
         conn.execute(
-            f"INSERT INTO {_INDEX_TABLE} "
+            "INSERT INTO normalized_ingest_index "
             "(fact_id, normalized_id, fact_revision) VALUES (?, ?, ?)",
             (
                 row["fact_id"],
@@ -359,12 +359,12 @@ def _rebuild_conn(conn) -> int:
             ),
         )
     indexed_count = conn.execute(
-        f"SELECT COUNT(*) FROM {_INDEX_TABLE}"
+        "SELECT COUNT(*) FROM normalized_ingest_index"
     ).fetchone()[0]
     if indexed_count != len(rows):
         raise RuntimeError("normalized ingest index rebuild row-count mismatch")
     conn.execute(
-        f"UPDATE {_STATE_TABLE} SET protocol_version = ?, complete = 1, "
+        "UPDATE normalized_ingest_index_state SET protocol_version = ?, complete = 1, "
         "covered_generation = generation WHERE state_id = 1",
         (_PROTOCOL_VERSION,),
     )
@@ -398,7 +398,7 @@ def rebuild_if_incomplete() -> Optional[int]:
 def _read_only_match(conn, query_text: str) -> Optional[str]:
     query_norm = normalize_claim(query_text)
     rows = conn.execute(
-        "SELECT fact_id, claim FROM facts WHERE " + _ELIGIBLE +
+        "SELECT fact_id, claim FROM facts WHERE epistemic_state = 'Validated' AND restricted = 0 AND fact_id GLOB 'ing:[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]'"
         " ORDER BY created_at, fact_id"
     )
     for row in rows:
@@ -432,9 +432,9 @@ def resolve_validated_normalized_fact(
         if not is_complete(conn):
             return _read_only_match(conn, query_text)
         rows = conn.execute(
-            f"SELECT f.fact_id, f.claim, f.revision, n.fact_revision "
-            f"FROM {_INDEX_TABLE} AS n JOIN facts AS f ON f.fact_id = n.fact_id "
-            "WHERE n.normalized_id = ? AND " + _eligible("f") +
+            "SELECT f.fact_id, f.claim, f.revision, n.fact_revision "
+            "FROM normalized_ingest_index AS n JOIN facts AS f ON f.fact_id = n.fact_id "
+            "WHERE n.normalized_id = ? AND f.epistemic_state = 'Validated' AND f.restricted = 0 AND f.fact_id GLOB 'ing:[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]'"
             " ORDER BY f.created_at, f.fact_id",
             (normalized_id,),
         ).fetchall()
@@ -453,5 +453,5 @@ def remove_fact(fact_id: str) -> bool:
     with memory._db() as conn:
         if _object_type(conn, _INDEX_TABLE) != "table":
             return False
-        cur = conn.execute(f"DELETE FROM {_INDEX_TABLE} WHERE fact_id = ?", (fact_id,))
+        cur = conn.execute("DELETE FROM normalized_ingest_index WHERE fact_id = ?", (fact_id,))
         return cur.rowcount == 1
