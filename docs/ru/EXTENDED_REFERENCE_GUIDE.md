@@ -145,7 +145,7 @@ candidate discovery != candidate adjudication
 
 ## Grant / non-claims / localization
 
-NLnet **submitted / under review / not awarded**. Approximately **€50,000** planning only; **budget change: none**.
+NLnet **submitted / not selected / not awarded**. Approximately **€50,000** planning only; **budget change: none**.
 
 No security/legal/GDPR certification, native-speaker editorial certification, AGI/consciousness, universal truth, active PostgreSQL runtime, semantic/hybrid/vector Reader runtime, completed dedicated/full Reader, automatic identity/corroboration/adjudication/evidence admission is claimed.
 
@@ -154,3 +154,18 @@ No security/legal/GDPR certification, native-speaker editorial certification, AG
 See the [Translation Status Ledger](../TRANSLATION_STATUS.md) for the current overall status; the count above is retained as historical provenance.
 
 Historical Russian RC-7 source: `main@ab3ad31c437647535030e371d58f456faf14017b`. Current Russian refresh source: `main@9666781d390e3276a111cb5ee1735f6606a76283`.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

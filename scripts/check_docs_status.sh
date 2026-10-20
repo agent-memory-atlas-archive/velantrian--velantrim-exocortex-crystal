@@ -34,6 +34,20 @@ japanese_parity_base = "5903e90f3e0f2884f4ba257a71808d19fc439ebc"
 locales = ["ar", "de", "es", "fr", "hi", "it", "ja", "ru", "zh-CN"]
 current_locales = locales
 refresh_locales = [locale for locale in locales if locale not in current_locales]
+# Explicit current English grant surfaces; frozen architecture/preregistration docs
+# are intentionally excluded from this stale-state guard.
+grant_current_english = (
+    "README.md", "ROADMAP.md", "GOVERNANCE.md", "CONTRIBUTING.md",
+    "docs/OVERVIEW.md", "docs/DOCUMENTATION_MAP.md", "docs/REVIEWER_OVERVIEW.md",
+    "docs/IMPLEMENTATION_STATUS.md", "docs/REVIEWER_GUIDE.md",
+    "docs/ARCHITECTURE_OVERVIEW.md", "docs/GRANT_NLNET_SCOPE.md",
+    "docs/GLOSSARY.md", "docs/ARCHITECTURE.md",
+    "docs/EXTENDED_REFERENCE_POLICY.md", "docs/PROJECT_GRANT_AND_GOVERNANCE.md",
+    "docs/STATUS.md", "docs/TRANSLATION_STATUS.md",
+    "docs/ai/README.md", "docs/ai/CURRENT_STATE.md", "docs/ai/COMPONENT_MAP.md",
+    "docs/ai/KNOWN_RISKS.md", "docs/grants/reviewer-qa.md",
+    "docs/grants/funding-use-plan.md", "docs/grants/baseline-funded-delta-matrix.md",
+)
 
 
 def expect(actual: object, expected: object, label: str) -> None:
@@ -154,15 +168,18 @@ expect(truthgate_v1.get("tracking_issue"), 441, "TruthGate-v1 tracking issue")
 expect(truthgate_v1.get("english_source_sha"), truthgate_v1_source, "TruthGate-v1 source")
 expect(truthgate_v1.get("current_markers_are_policy_parity_proof"), True, "TruthGate-v1 parity proof")
 expect(grant.get("submitted"), True, "grant submitted")
-expect(grant.get("under_review"), True, "grant review")
+expect(grant.get("under_review"), False, "grant review")
 expect(grant.get("awarded"), False, "grant awarded")
+expect(grant.get("decision"), "NOT_SELECTED", "grant decision")
+expect(grant.get("award_status"), "NOT_AWARDED", "grant award status")
+expect(grant.get("decision_date"), "2026-10-09", "grant decision date")
 
 common = (
     runtime_commit,
     "2078 passed / 13 skipped / 0 failed",
     "9756",
     "active=false",
-    "submitted / under review / not awarded",
+    "submitted / not selected / not awarded",
     "Guardian",
     "TruthGate",
     "TrustSnapshot",
@@ -297,7 +314,7 @@ require(
         "candidate discovery",
         "candidate adjudication",
         "Reviewer validation",
-        "submitted / under review / not awarded",
+        "submitted / not selected / not awarded",
     ),
 )
 forbid(
@@ -310,6 +327,43 @@ forbid(
         "94% accuracy",
     ),
 )
+
+# Every explicitly current English grant surface must shed superseded review wording.
+for relative in grant_current_english:
+    path = root / relative
+    if not path.is_file():
+        errors.append(f"missing English CURRENT grant surface: {relative}")
+        continue
+    forbid(relative, path.read_text(encoding="utf-8"), ("submitted / under review / not awarded", "under review", "review: in progress"))
+
+# Grant-only locale overlays do not advance historical translation checkpoints.
+grant_locale_documents = (
+    "ARCHITECTURE_OVERVIEW.md", "EXTENDED_REFERENCE_GUIDE.md", "GLOSSARY.md",
+    "GRANT_OVERVIEW.md", "IMPLEMENTATION_STATUS.md", "STATUS.md",
+    "STORAGE_AND_AUTHORITY_BOUNDARIES.md",
+)
+for locale in locales:
+    current_paths = [f"README.{locale}.md"]
+    current_paths.extend(f"docs/{locale}/{name}" for name in grant_locale_documents)
+    if locale in ("de", "es", "fr", "it", "ru"):
+        current_paths.append(f"docs/{locale}/README.md")
+    for relative in current_paths:
+        text = (root / relative).read_text(encoding="utf-8")
+        require(relative, text, (
+            "grant-only update", "full translation checkpoint remains historical",
+            "submitted: true", "under_review: false", "awarded: false",
+            "submitted / not selected / not awarded", "review: completed",
+            "decision: NOT_SELECTED", "award status: NOT_AWARDED",
+            "decision date: 2026-10-09",
+        ))
+        if relative == "README.ja.md":
+            # Preserve exactly this previously frozen compatibility line, not a
+            # general exemption for review claims in the current document.
+            text = text.replace(
+                "Historical/public compatibility literal: `submitted / under review / not awarded`。",
+                "",
+            )
+        forbid(relative, text, ("under review", "review: in progress", "review में है"))
 
 for locale in locales:
     index = (root / "docs" / locale / "README.md").read_text(encoding="utf-8")

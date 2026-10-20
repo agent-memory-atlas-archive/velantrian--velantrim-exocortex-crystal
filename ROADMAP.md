@@ -2,6 +2,9 @@
 <!-- d4-source-scope: project-grant-governance-glossary -->
 # 🗺️ Velantrim Exo-Cortex Crystal — Roadmap
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 > Only merged `main`, executable tests and exact CI are implementation truth. Resolve live GitHub and `docs/STATUS.md` before treating retained signed checkpoints below as the current repository head.
 
 **Retained signed architecture checkpoint (architecture evidence; not live HEAD):** `main@76a9493b8ba64b832472ef9bfc1f1c23ebe6654e` — PR #392; post-merge CI `31771677028` 9/9  
@@ -12,7 +15,7 @@
 **NLI neutral-filter v1:** issue #388 / PR #389 completed — frozen gate FAIL  
 **RRTIC-v1:** issue #391 / PR #392 completed — architecture contract only  
 **Legacy exact-normalized dedupe:** issue #165 / PR #431 completed — derived compatibility index only; no re-key or semantic matching  
-**Grant status:** submitted / under review / not awarded
+**Grant status:** submitted / not selected / not awarded
 
 ## ✅ Delivered Reader implementation baseline
 
@@ -162,7 +165,7 @@ The nine supported localized Reader-dependent public/detail packs are current at
 
 ## 🎓 Grant boundary
 
-NLnet remains **submitted / under review / not awarded**. Approximate €50,000 is planning context only. Work merged before an agreement is existing pre-agreement baseline/research history and cannot later be counted as newly funded delivery.
+NLnet remains **submitted / not selected / not awarded**. Approximate €50,000 is planning context only. Work merged before an agreement is existing pre-agreement baseline/research history and cannot later be counted as newly funded delivery.
 
 ## Related documents
 

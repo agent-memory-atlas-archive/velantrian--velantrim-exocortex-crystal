@@ -107,4 +107,19 @@ Retrieval score أو similarity أو Reader relation أو NLI label أو RRTIC s
 - PostgreSQL normal runtime غير نشط؛
 - active Reader pgvector/ANN غير مصرح؛
 - automatic contradiction adjudication غير موجود؛
-- NLnet submitted / under review / not awarded.
+- NLnet submitted / not selected / not awarded.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

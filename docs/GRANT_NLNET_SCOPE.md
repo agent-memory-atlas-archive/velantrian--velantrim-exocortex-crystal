@@ -2,8 +2,11 @@
 <!-- d4-source-scope: project-grant-governance-glossary -->
 # NLnet Scope — Crystal
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-08-12  
-**Grant status:** submitted / under review / not awarded  
+**Grant status:** submitted / not selected / not awarded\
 **Budget change:** none
 
 ## Authority boundary

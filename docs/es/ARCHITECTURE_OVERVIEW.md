@@ -112,6 +112,21 @@ SQLite sigue ordinary active local-first. PostgreSQL/pgvector sigue inactivo `ac
 
 No se reivindican dedicated/full autonomous Reader, semantic/hybrid Reader runtime, Reader FTS/ANN/vector DB, NLI/CrossEncoder runtime, RRTIC runtime provider, automatic identity/evidence/adjudication/Canon mutation, active PostgreSQL runtime, security/legal/GDPR certification ni awarded grant.
 
-NLnet sigue **submitted / under review / not awarded**; aproximadamente €50,000 es planning only.
+NLnet sigue **submitted / not selected / not awarded**; aproximadamente €50,000 es planning only.
 
 Historical Spanish source: `main@208f1c772ee3a112cb803d2413c120bef23adb05`. Current Spanish refresh audit source: `main@bbe6b0d3d90d80b3c669ddab5fc56aa1bfe419eb`.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

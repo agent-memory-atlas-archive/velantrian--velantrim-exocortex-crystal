@@ -1,5 +1,8 @@
 # NLnet Reviewer Q&A — Velantrim Crystal
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 Internal preparation for likely reviewer questions. These answers are written against current
 public repository truth, not application-era snapshots. Where something is a proposed funded
 delta rather than existing code, it is labelled as such.
@@ -90,7 +93,7 @@ new independently testable funded delta
 public deliverable
 ```
 
-Approx. €50,000 is planning context only. The proposal is submitted / under review / not
+Approx. €50,000 is planning context only. The proposal is submitted / not selected / not
 awarded; no approved budget or payment commitment is claimed.
 
 ### Q6. Does RC-9 mean semantic/vector retrieval is now required?
@@ -191,7 +194,7 @@ from provenance, revision and lineage. It is therefore useful reviewer-facing re
 historical path information may or may not deserve reader/context exposure. It does **not**
 change Crystal runtime, Reader, Canon, Guardian, TruthGate, grant scope, award status or budget.
 Continuum is not a submitted Crystal workstream and is not a candidate funded delta under the
-current NLnet proposal.
+historical NLnet proposal.
 
 See
 [`CONTINUUM_CURRENT_STATE_VS_TRAJECTORY_CROSS_PROJECT_EVIDENCE.md`](../research/CONTINUUM_CURRENT_STATE_VS_TRAJECTORY_CROSS_PROJECT_EVIDENCE.md)

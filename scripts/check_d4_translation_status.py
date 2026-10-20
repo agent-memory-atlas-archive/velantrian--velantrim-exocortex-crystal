@@ -120,12 +120,12 @@ def main() -> int:
                     (
                         "programme: NLnet NGI0 Commons Fund",
                         "proposal: submitted",
-                        "review: in progress",
+                        "review: completed",
                         "award: not awarded",
                         "budget change: none",
                     )
                     if is_grant
-                    else ("submitted / under review / not awarded", "budget change", "not awarded")
+                    else ("submitted / not selected / not awarded", "budget change", "not awarded")
                 )
                 for marker in grant_markers:
                     if marker not in text:

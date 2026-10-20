@@ -74,7 +74,7 @@ Historical localization state word `REFRESH_NEEDED` is retained here as compatib
 
 SQLite ordinary active local-first profile है। PostgreSQL/pgvector optional inactive target है, `active=false`; import/equivalence activation नहीं है।
 
-NLnet proposal submitted / under review / not awarded है। लगभग €50,000 planning context only है; budget change: none। कोई legal/GDPR/security या native-speaker editorial certification claim नहीं है।
+NLnet proposal submitted / not selected / not awarded है। लगभग €50,000 planning context only है; budget change: none। कोई legal/GDPR/security या native-speaker editorial certification claim नहीं है।
 
 Historical runtime checkpoint `bbd816c09dd39a02e6de6c1014438490572f40f6`, `2078 passed / 13 skipped / 0 failed` और `9756 statements / 100.00% line coverage` provenance के रूप में retained हैं।
 
@@ -90,3 +90,18 @@ Historical runtime checkpoint `bbd816c09dd39a02e6de6c1014438490572f40f6`, `2078 
 - [Privacy](../../PRIVACY.md)
 - [GDPR](../../GDPR.md)
 - [Archive](../archive/README.md)
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

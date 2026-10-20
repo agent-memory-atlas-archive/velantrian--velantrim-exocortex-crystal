@@ -97,7 +97,7 @@ physical L3 != strict Canon
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress
+review: completed
 award: not awarded
 budget change: none
 ```
@@ -109,3 +109,18 @@ budget change: none
 `bbd816c09dd39a02e6de6c1014438490572f40f6`、`2078 passed / 13 skipped / 0 failed` 与 `9756 statements / 100.00% line coverage` 保留为 historical compatibility evidence；它们不是当前 repository test count。
 
 精确 live implementation 与 CI 状态必须从 GitHub、[`docs/STATUS.md`](../STATUS.md)、[`TEST_REPORT.md`](../../TEST_REPORT.md) 与 [machine-readable manifest](../status/implementation-manifest.json) 解析。
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

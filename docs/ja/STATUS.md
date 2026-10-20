@@ -110,6 +110,21 @@ Guardian、TruthGate、TrustSnapshot、CanonicalView は独立した authority/r
 
 SQLite は ordinary active local-first path。PostgreSQL/pgvector は inactive target で `active=false`。automatic backend switching はありません。`physical L3 != strict Canon` であり successful import も backend activation ではありません。
 
-NLnet は **submitted / under review / not awarded**。約 €50,000 は planning context only、budget change: none。
+NLnet は **submitted / not selected / not awarded**。約 €50,000 は planning context only、budget change: none。
 
 Current Japanese parity audit base は `main@5903e90f3e0f2884f4ba257a71808d19fc439ebc`。旧 source marker `a497b7d3cfbe59ca75b11d7449d5a728455b3130` は historical provenance のみです。Live repository lifecycle state は GitHub から解決してください。
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

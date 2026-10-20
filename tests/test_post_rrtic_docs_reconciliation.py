@@ -114,8 +114,11 @@ def test_grant_and_localization_boundaries_remain_unchanged() -> None:
 
     grant = manifest["grant"]
     assert grant["submitted"] is True
-    assert grant["under_review"] is True
+    assert grant["under_review"] is False
     assert grant["awarded"] is False
+    assert grant["decision"] == "NOT_SELECTED"
+    assert grant["award_status"] == "NOT_AWARDED"
+    assert grant["decision_date"] == "2026-10-09"
     assert grant["budget_changed"] is False
 
     docs = manifest["documentation"]

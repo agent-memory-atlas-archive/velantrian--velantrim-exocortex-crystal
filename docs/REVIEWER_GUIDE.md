@@ -2,6 +2,9 @@
 <!-- d2-source-scope: reviewer-security-privacy-failure -->
 # Reviewer Guide — Velantrim Exo-Cortex Crystal
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 > 🌐 🇬🇧 **English** · 🇩🇪 [Deutsch](./de/REVIEWER_GUIDE.md) · 🇫🇷 [Français](./fr/REVIEWER_GUIDE.md) · 🇪🇸 [Español](./es/REVIEWER_GUIDE.md) · 🇮🇹 [Italiano](./it/REVIEWER_GUIDE.md) · 🇷🇺 [Русский](./ru/REVIEWER_GUIDE.md) · 🇨🇳 [简体中文](./zh-CN/REVIEWER_GUIDE.md) · 🇸🇦 [العربية](./ar/REVIEWER_GUIDE.md) · 🇯🇵 [日本語](./ja/REVIEWER_GUIDE.md) · 🇮🇳 [हिन्दी](./hi/REVIEWER_GUIDE.md)
 
 **Status date:** 2026-08-08  
@@ -171,7 +174,7 @@ The current matrix is [`FAILURE_MODES.md`](./FAILURE_MODES.md).
 
 ## 9. Grant and evidence boundary
 
-The project is submitted and under review. It is **not awarded**, and no budget change is
+The proposal was submitted and was **not selected**. It is **not awarded**, and no budget change is
 claimed. Merged baseline work cannot be counted again as future funded delivery.
 
 Read [`GRANT_NLNET_SCOPE.md`](./GRANT_NLNET_SCOPE.md) and the

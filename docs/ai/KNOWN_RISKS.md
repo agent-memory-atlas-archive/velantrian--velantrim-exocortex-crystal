@@ -1,5 +1,8 @@
 # ⚠️ Crystal Known Risks and Open Boundaries
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-08-16  
 **Verified retained runtime checkpoint:** `bbd816c09dd39a02e6de6c1014438490572f40f6`  
 **Repository HEAD / exact CI / active milestone:** `RESOLVE_LIVE_GITHUB`  
@@ -218,7 +221,7 @@ These three historical residual scopes are closed/completed. Their completion do
 - local-first/offline does not itself prove security or GDPR compliance;
 - immutable workflow pins improve reproducibility but do not prove supply-chain security;
 - no universal truth, zero hallucinations, AGI, consciousness or production certification is claimed;
-- NLnet remains `submitted / under review / not awarded`; approximate €50,000 planning only.
+- NLnet remains `submitted / not selected / not awarded`; approximate €50,000 planning only.
 
 ## Next actions
 

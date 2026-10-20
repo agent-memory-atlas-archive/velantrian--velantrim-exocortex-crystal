@@ -181,7 +181,7 @@ def main() -> int:
         "relation candidate",
         "contradiction candidate != confirmed contradiction",
         "active=false",
-        "submitted / under review / not awarded",
+        "submitted / not selected / not awarded",
         "budget change is none",
         "existing baseline, not future funded delta",
     ):

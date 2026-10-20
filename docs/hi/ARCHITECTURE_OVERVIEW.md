@@ -96,4 +96,19 @@ SQLite ordinary active local-first profile है। PostgreSQL/pgvector optiona
 
 ## Grant / non-claims
 
-NLnet submitted / under review / not awarded है। Crystal dedicated Reader Core, semantic/vector Reader runtime, RRTIC runtime authorization, NLI runtime filter, universal truth, zero hallucinations या legal/security/GDPR certification का दावा नहीं करता।
+NLnet submitted / not selected / not awarded है। Crystal dedicated Reader Core, semantic/vector Reader runtime, RRTIC runtime authorization, NLI runtime filter, universal truth, zero hallucinations या legal/security/GDPR certification का दावा नहीं करता।
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

@@ -96,9 +96,24 @@ repetition across sources != corroboration
 ## Grant / localization
 
 **Funded delta** — new measurable work beyond verified pre-agreement baseline; existing merged work cannot be budgeted again.  
-**NLnet state** — **submitted / under review / not awarded**. Approximately **€50,000** planning only; **budget change: none**; award remains **not awarded**.  
+**NLnet state** — **submitted / not selected / not awarded**. Approximately **€50,000** planning only; **budget change: none**; award remains **not awarded**.
 **`CURRENT` translation** — current against its explicit source marker, while older markers may remain immutable provenance.  
 **`REFRESH_NEEDED` translation** — rich translation known to lag governing English semantics.  
 **Native-speaker editorial certification** — independent human language-quality review; not implied by translation existence.
 
 Historical RC-7 Russian source: `main@ab3ad31c437647535030e371d58f456faf14017b`. Current Russian refresh source: `main@9666781d390e3276a111cb5ee1735f6606a76283`.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

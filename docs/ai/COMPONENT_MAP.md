@@ -1,5 +1,8 @@
 # 🗺️ Crystal Component Map for Agents
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 Use this map to choose the smallest relevant inspection surface. GitHub merged `main`, executable tests and exact CI are implementation authority.
 
 ## 1. Claims / admission / storage
@@ -180,4 +183,4 @@ No automatic Reader OCR/multimodal engine, semantic/hybrid/vector Reader runtime
 
 **Start:** `AGENTS.md`, `docs/DOCUMENTATION_SYNC_PROTOCOL.md`, `docs/STATUS.md`, `docs/IMPLEMENTATION_STATUS.md`, `ROADMAP.md`, `docs/ai/WORK_LOG.md`.
 
-NLnet remains `submitted / under review / not awarded`. Issues #155, #165 and #214 are historical closed/completed scopes; their semantic scopes remain distinct and do not select current work. Notion is synchronized only after exact post-merge evidence.
+NLnet remains `submitted / not selected / not awarded`. Issues #155, #165 and #214 are historical closed/completed scopes; their semantic scopes remain distinct and do not select current work. Notion is synchronized only after exact post-merge evidence.

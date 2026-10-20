@@ -2,6 +2,9 @@
 <!-- d4-source-scope: project-grant-governance-glossary -->
 # Crystal Project, Grant and Governance Overview
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-08-12  
 **Authority:** merged GitHub `main`, executable tests, exact CI and detailed English contracts prevail.
 
@@ -108,7 +111,10 @@ embeddings, ANN/vector DB, semantic/hybrid runtime, claim identity or evidence a
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
 award: not awarded
 budget change: none
 ```

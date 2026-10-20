@@ -12,12 +12,12 @@
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress
+review: completed
 award: not awarded
 budget change: none
 ```
 
-NLnet остаётся **submitted / under review / not awarded**. Приблизительно **€50,000** — planning/transparency context only, не approved budget, grant award или payment commitment.
+NLnet остаётся **submitted / not selected / not awarded**. Приблизительно **€50,000** — planning/transparency context only, не approved budget, grant award или payment commitment.
 
 ## 🧬 Existing baseline
 
@@ -88,3 +88,18 @@ Significant architecture/invariant changes begin with issue/RFC and require exec
 ## Localization provenance
 
 Historical Russian RC-7 source: `main@ab3ad31c437647535030e371d58f456faf14017b`. Current Russian refresh source: `main@9666781d390e3276a111cb5ee1735f6606a76283`. Other eight languages are not updated by Issue #410.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

@@ -107,7 +107,7 @@ def main() -> int:
                 "EXCEPTION",
                 "QUALIFICATION",
                 "TENSION",
-                "submitted / under review / not awarded",
+                "submitted / not selected / not awarded",
                 "€50,000",
                 "budget change: none",
                 "REFRESH_NEEDED",

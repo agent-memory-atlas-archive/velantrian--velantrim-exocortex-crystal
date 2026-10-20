@@ -1,5 +1,8 @@
 # Funding Use Plan — Approx. €50,000 (NLnet Commons Fund)
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 ## Application status
 
 | Field | Value |
@@ -7,14 +10,14 @@
 | Proposal framing | **Verifiable AI memory infrastructure for European use cases (GDPR-oriented)** |
 | Programme | NLnet **NGI0 Commons Fund** |
 | Requested amount | approx. **€50,000** |
-| Status | **Submitted / under review / not awarded** |
+| Status | **Submitted / not selected / not awarded** |
 
 > **Planning and transparency document.** This is not an approved budget, award or payment
 > commitment. Private correspondence details remain outside the public repository.
 
 ## Living-baseline rule
 
-Crystal has continued to advance while the proposal is under review. Grant accounting must
+Crystal continued to advance during the proposal review. The proposal was not selected; any future grant accounting must
 therefore be reconciled against live signed `main` at the time of any agreement.
 
 ```text

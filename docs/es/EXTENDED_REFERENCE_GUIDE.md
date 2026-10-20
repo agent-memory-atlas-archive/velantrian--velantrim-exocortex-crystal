@@ -144,7 +144,7 @@ candidate discovery != candidate adjudication
 
 ## Grant / Non-claims / Localization
 
-NLnet sigue **submitted / under review / not awarded**. Aproximadamente **€50,000** es planning only; **budget change: none**.
+NLnet sigue **submitted / not selected / not awarded**. Aproximadamente **€50,000** es planning only; **budget change: none**.
 
 No se reivindican security/legal/GDPR certification, native-speaker editorial certification, AGI/consciousness, universal truth, active PostgreSQL runtime, semantic/hybrid/vector Reader runtime, completed dedicated/full Reader ni automatic identity/corroboration/adjudication/evidence admission.
 
@@ -155,3 +155,18 @@ El [Translation Status Ledger](../TRANSLATION_STATUS.md) contiene el estado gene
 Historical Spanish D5 source: `d5f7f1c4c0908d24f8994e4fbec45c102b9ab7d9`. Current Spanish refresh audit source: `main@bbe6b0d3d90d80b3c669ddab5fc56aa1bfe419eb`.
 
 Routes: [Policy](../EXTENDED_REFERENCE_POLICY.md), [Map](../DOCUMENTATION_MAP.md), [Status](../STATUS.md), [Architecture](../ARCHITECTURE.md), [ADR](../ADR.md), [Security](../../SECURITY.md), [Privacy](../../PRIVACY.md), [GDPR](../../GDPR.md), [Archive](../archive/README.md).
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

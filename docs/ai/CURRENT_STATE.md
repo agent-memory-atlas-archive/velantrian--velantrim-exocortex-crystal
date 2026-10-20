@@ -1,5 +1,8 @@
 # 🤖 Crystal AI Current State
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-08-21  
 **Document role:** compact technical state snapshot; live GitHub + tests + exact CI override this file if repository state has advanced.  
 **Repository HEAD:** `RESOLVE_LIVE_GITHUB`.  
@@ -316,7 +319,7 @@ A visually stronger old translation may be used as a layout reference only. It m
 
 ## Grant / residual backlog
 
-NLnet remains submitted / under review / not awarded. Approximate €50,000 remains planning context only.
+NLnet remains submitted / not selected / not awarded. Approximate €50,000 remains planning context only.
 
 Residual scope ledger:
 

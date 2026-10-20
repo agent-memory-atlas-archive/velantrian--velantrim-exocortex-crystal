@@ -109,9 +109,24 @@ repetition across sources != corroboration
 ## Grant / Localization
 
 **Funded delta** — neue messbare Arbeit jenseits der verifizierten pre-agreement baseline; bestehende gemergte Arbeit darf nicht erneut budgetiert werden.  
-**NLnet state** — **submitted / under review / not awarded**. Ungefähr **€50,000** sind planning only; **budget change: none**; award bleibt **not awarded**.  
+**NLnet state** — **submitted / not selected / not awarded**. Ungefähr **€50,000** sind planning only; **budget change: none**; award bleibt **not awarded**.
 **`CURRENT` translation** — current gegen ihren expliziten Source-/Parity-Marker; ältere Marker können immutable provenance bleiben.  
 **`REFRESH_NEEDED` translation** — reichhaltige Übersetzung, deren governing English semantics nachweislich weiter sind.  
 **Native-speaker editorial certification** — unabhängige menschliche Sprachqualitätsprüfung; wird durch die Existenz einer Übersetzung nicht impliziert.
 
 Historischer deutscher Glossary source: `151b41c680190f7f3de729bf63e8e80a9d2285ce`. Current German refresh audit source: `main@ad8cec8c868f64b6dfbdc3bf3087230f59c3861c`.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

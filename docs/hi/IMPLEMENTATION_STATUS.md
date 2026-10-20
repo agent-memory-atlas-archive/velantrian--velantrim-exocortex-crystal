@@ -70,6 +70,22 @@ physical L3 != strict Canon
 
 SQLite active ordinary profile है। PostgreSQL/pgvector optional inactive target है; successful import/equivalence backend activation, automatic switching, cutover, rollback या dual-write नहीं है।
 
-NLnet proposal submitted है, review में है और **not awarded** है। लगभग €50,000 planning context only है।
+NLnet proposal submitted था; समीक्षा पूरी हो गई है और प्रस्ताव **not selected / not awarded** है। लगभग €50,000 planning context only है।
 
 Historical runtime checkpoint `bbd816c09dd39a02e6de6c1014438490572f40f6` और `2078 passed / 13 skipped / 0 failed` केवल retained provenance हैं।
+
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

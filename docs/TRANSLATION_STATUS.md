@@ -1,5 +1,8 @@
 # 🌍 Crystal Translation Status
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-08-21  
 **Primary/source language:** English  
 **Active policy:** [LOCALIZATION_POLICY.md](./LOCALIZATION_POLICY.md)  
@@ -16,6 +19,23 @@
 **Latest locale refresh tracking:** Issue #441 — TruthGate-v1 D1 freshness reassessment
 
 This ledger records translation freshness. Inline `CURRENT` markers are trace metadata; current technical truth still resolves through merged implementation, executable tests, exact CI, current English contracts and the machine-readable implementation manifest.
+
+## Grant-only reconciliation — decision of 2026-10-09
+
+The current NLnet information in all nine localized root READMEs and affected
+CURRENT detail documents is updated to `NOT_SELECTED / NOT_AWARDED` with decision
+date `2026-10-09`. `submitted=true`, `under_review=false`, `awarded=false`.
+This is a **grant-only update**, not a full retranslation or a new technical
+parity certification. The source SHAs, D1–D5 source checkpoints, historical
+translation inventories and prior audit evidence below remain unchanged. Existing
+`CURRENT` labels describe their recorded technical/policy scope; they do not make
+an older checkpoint the latest English source. Documents without mutable grant
+assertions are not relabeled or declared refreshed by this change.
+
+Historical frozen research/architecture, preregistration, archived grant-sync
+records and the original proposal retain the status recorded at their checkpoint;
+use [current grant scope](./GRANT_NLNET_SCOPE.md) and the machine manifest for the
+final outcome. Approximate €50,000 remains historical planning context only.
 
 ## Current localization truth
 
@@ -191,7 +211,10 @@ Funding truth remains identical in every current locale:
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
 award: not awarded
 budget change: none
 ```
@@ -270,7 +293,7 @@ physical L3 != strict Canon
 successful import != backend activation
 ```
 
-NLnet remains **submitted / under review / not awarded**. Translation cannot turn planning context into an award, a failed evaluation into a runtime capability, or a retrieval candidate into Evidence/Canon authority.
+NLnet remains **submitted / not selected / not awarded**. Translation cannot turn planning context into an award, a failed evaluation into a runtime capability, or a retrieval candidate into Evidence/Canon authority.
 
 ## Remaining localization program
 

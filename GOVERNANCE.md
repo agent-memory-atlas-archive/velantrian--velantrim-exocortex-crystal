@@ -2,6 +2,9 @@
 <!-- d4-source-scope: project-grant-governance-glossary -->
 # 🏛️ Governance
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 This document explains how decisions are made in Velantrim ExoCortex — Crystal,
 how the project is maintained and how it remains independently auditable.
 
@@ -107,7 +110,7 @@ This invitation is a governance decision, not an automatic reward based on commi
 Current public status:
 
 ```text
-NLnet proposal: submitted / under review / not awarded
+NLnet proposal: submitted / not selected / not awarded
 budget change: none
 ```
 

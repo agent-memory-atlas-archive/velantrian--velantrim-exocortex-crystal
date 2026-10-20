@@ -1,5 +1,8 @@
 # Velantrim Exo-Cortex Crystal — Reviewer Overview
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 > **Secondary reviewer document.** The canonical reviewer entry point is
 > [REVIEWER_GUIDE.md](./REVIEWER_GUIDE.md). For exact current state, see
 > [STATUS.md](./STATUS.md), [IMPLEMENTATION_STATUS.md](./IMPLEMENTATION_STATUS.md)
@@ -7,7 +10,7 @@
 
 **Current signed architecture checkpoint:** `main@76a9493b8ba64b832472ef9bfc1f1c23ebe6654e` / PR #392  
 **Post-merge CI:** `31771677028` — **9/9 SUCCESS**  
-**Grant status:** NLnet **submitted / under review / not awarded**
+**Grant status:** NLnet **submitted / not selected / not awarded**
 
 ## 1. Executive summary
 
@@ -148,7 +151,7 @@ Crystal does not claim:
 
 ## 8. Grant and research boundary
 
-NLnet remains **submitted / under review / not awarded**. Approximate €50,000 is planning context only. Work completed before any funding agreement—including RC-1…RC-9, Comparator v1, NLI v1 and RRTIC-v1—remains existing pre-agreement baseline/research history and cannot later be relabeled as newly funded delivery.
+NLnet remains **submitted / not selected / not awarded**. Approximate €50,000 is planning context only. Work completed before any funding agreement—including RC-1…RC-9, Comparator v1, NLI v1 and RRTIC-v1—remains existing pre-agreement baseline/research history and cannot later be relabeled as newly funded delivery.
 
 ## 9. Recommended reviewer path
 

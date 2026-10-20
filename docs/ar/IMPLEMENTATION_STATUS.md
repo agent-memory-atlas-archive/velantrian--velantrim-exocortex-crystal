@@ -79,4 +79,19 @@ Therefore semantic/hybrid retrieval, NLI filtering and RRTIC runtime provider ar
 
 ## 💶 Grant truth
 
-NLnet remains **submitted / under review / not awarded**. Approximately €50,000 is planning context only; budget change: none. Work merged before any funding agreement remains existing baseline.
+NLnet remains **submitted / not selected / not awarded**. Approximately €50,000 is planning context only; budget change: none. Work merged before any funding agreement remains existing baseline.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

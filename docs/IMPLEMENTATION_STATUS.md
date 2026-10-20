@@ -1,5 +1,8 @@
 # Implementation Status: Crystal vs Future Exo-Cortex Work
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-09-07  
 **V1 lifecycle:** **COMPLETE / 100% / FREEZE-STABILITY**  
 **V1 P0/P1 remaining:** `0 / 0`  
@@ -181,7 +184,7 @@ Live ruleset read-back on 2026-09-07 confirms that `crystal-main-governance` / `
 
 Localization parity and historical provenance are owned by [`docs/TRANSLATION_STATUS.md`](./TRANSLATION_STATUS.md). The 2026-08-22 V1 lifecycle closure is an overlay across supported locales and does not rewrite older architecture checkpoints.
 
-NLnet remains **submitted / under review / not awarded**. Approximate €50,000 remains planning context only.
+NLnet remains **submitted / not selected / not awarded**. Approximate €50,000 remains planning context only.
 
 ## Future work boundary
 

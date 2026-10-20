@@ -58,7 +58,7 @@ SQLite ordinary active local-first profile है। PostgreSQL/pgvector optiona
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress
+review: completed
 award: not awarded
 budget change: none
 ```
@@ -68,3 +68,18 @@ budget change: none
 कोई legal, GDPR, security या native-speaker editorial certification claim नहीं है।
 
 Historical runtime evidence `2078 passed / 13 skipped / 0 failed` और `9756 statements / 100.00% line coverage` retained provenance है, current test-count claim नहीं।
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

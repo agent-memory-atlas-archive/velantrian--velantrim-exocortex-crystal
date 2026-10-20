@@ -86,4 +86,19 @@ Credentials profiles, bundles, receipts, logs, GitHub या Notion में �
 
 ## Non-claims
 
-Crystal active PostgreSQL runtime, automatic backend switching, dedicated Reader Core, semantic/vector Reader runtime, RRTIC/NLI runtime authorization, production multi-tenancy, universal truth या legal/security/GDPR certification का दावा नहीं करता। NLnet submitted / under review / not awarded है।
+Crystal active PostgreSQL runtime, automatic backend switching, dedicated Reader Core, semantic/vector Reader runtime, RRTIC/NLI runtime authorization, production multi-tenancy, universal truth या legal/security/GDPR certification का दावा नहीं करता। NLnet submitted / not selected / not awarded है।
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

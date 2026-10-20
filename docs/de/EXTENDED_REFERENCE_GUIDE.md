@@ -143,7 +143,7 @@ candidate discovery != candidate adjudication
 
 ## Grant / Non-claims / Localization
 
-NLnet bleibt **submitted / under review / not awarded**. Ungefähr **€50,000** sind planning only; **budget change: none**.
+NLnet bleibt **submitted / not selected / not awarded**. Ungefähr **€50,000** sind planning only; **budget change: none**.
 
 Es wird keine security/legal/GDPR certification, native-speaker editorial certification, AGI/consciousness, universal truth, active PostgreSQL runtime, semantic/hybrid/vector Reader runtime, completed dedicated/full Reader oder automatic identity/corroboration/adjudication/evidence admission behauptet.
 
@@ -154,3 +154,18 @@ Den aktuellen Gesamtstatus enthält das [Translation Status Ledger](../TRANSLATI
 Historischer deutscher D5 source: `d5f7f1c4c0908d24f8994e4fbec45c102b9ab7d9`. Current German refresh audit source: `main@ad8cec8c868f64b6dfbdc3bf3087230f59c3861c`.
 
 Routen: [Policy](../EXTENDED_REFERENCE_POLICY.md), [Map](../DOCUMENTATION_MAP.md), [Status](../STATUS.md), [Architecture](../ARCHITECTURE.md), [ADR](../ADR.md), [Security](../../SECURITY.md), [Privacy](../../PRIVACY.md), [GDPR](../../GDPR.md), [Archive](../archive/README.md).
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

@@ -103,7 +103,54 @@ A human or AI agent with Notion access must:
 
 ## Pending hand-offs
 
-No pending hand-offs at the time this protocol was created.
+## HOFF-20261020-01 — NLnet final decision reconciliation
+
+- Status: `HANDOFF_REQUIRED`
+- Created: 2026-10-20
+- GitHub PR: the single Draft PR from `fix/nlnet-not-selected-2026-10-09` into `main`; exact head and check evidence are recorded there.
+- Exact base SHA: `6660210b65ff99362a16a7290d03b3f769b08cf0`.
+- Intended Notion record title: Crystal — NLnet grant status and decision history.
+- Notion access for originating actor: `UNAVAILABLE`.
+
+### Problem / opportunity
+
+Current grant surfaces still said the proposal was under review after the user-provided final decision of 2026-10-09.
+
+### Material findings
+
+The machine manifest exposes submission/review/award booleans consumed by docs-status and pytest; D4/D5 checkers also enforce prose. Current locale packs use historical translation checkpoints that must not be rewritten as if they established the final outcome.
+
+### Decision and rationale
+
+Preserve `submitted=true`, set `under_review=false`, preserve `awarded=false` and `budget_changed=false`; add `decision=NOT_SELECTED`, `award_status=NOT_AWARDED`, `decision_date=2026-10-09`. Align current English and nine-locale grant assertions while explicitly retaining their technical translation checkpoints.
+
+### Alternatives rejected or deferred
+
+Do not rewrite historical review records, falsify prior translation provenance, publish a refusal reason, change the requested budget, alter runtime/architecture, or implement another backlog item. No future funding is assumed.
+
+### Truth / Canon / evidence / privacy / authority boundaries
+
+No runtime, evidence admission, Canon, TruthGate, Guardian, security or provenance authority changes. No private correspondence, decision rationale or personal information is included. The decision/date are user-provided facts, not independently retrieved correspondence.
+
+### Files and public documentation updated
+
+Current English README/governance/roadmap/status/grant/AI surfaces; affected root and D1–D5 grant assertions in nine locales; implementation manifest; existing grant checkers and regression tests. The Draft PR diff is the exhaustive changed-file inventory. Frozen archives, evidence, preregistration, original application and source/control SHAs are unchanged.
+
+### Tests / CI / runtime evidence
+
+Run docs-status, D1–D5 source/translation gates, relevant pytest and the existing full CI, including Python 3.11/3.12. The Draft PR records exact commands/results and head-linked CI; no historical runtime checkpoint or test-count record is advanced by this grant-only change.
+
+### Known limitations and next actions
+
+The PR remains draft and unmerged for user review. A connected maintainer must synchronize only this public outcome and the PR/CI evidence into the intended Notion history; do not introduce private refusal details. No Notion update is claimed. If the PR is later explicitly approved and merged, record its final merge/CI evidence then; this task does not authorize merging.
+
+### Synchronization completion
+
+- Connected actor: pending.
+- Safe Notion title/reference: pending.
+- Synchronization date: pending.
+- Final merge SHA / CI evidence: not applicable; not merged.
+
 
 ## Completed hand-offs
 

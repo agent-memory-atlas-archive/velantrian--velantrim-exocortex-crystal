@@ -1,5 +1,8 @@
 # 🤖 Crystal — Special for AI / Agent Entry Point
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Document role:** machine/agent router, not a human landing page.  
 **Project:** `velantrian/velantrim-exocortex-crystal`  
 **Rule:** re-resolve live GitHub before treating any dated SHA or issue state in documentation as current.
@@ -69,7 +72,10 @@ rrtic_runtime_provider: false
 sqlite_ordinary_local_first: active
 postgresql_pgvector_reader: inactive
 postgresql_pgvector_active: false
-grant_status: submitted_under_review_not_awarded
+grant_status: submitted_not_selected_not_awarded
+grant_decision: NOT_SELECTED
+grant_award_status: NOT_AWARDED
+grant_decision_date: 2026-10-09
 ```
 
 Resolution rule:
@@ -236,7 +242,7 @@ The Human/AI documentation architecture milestone did not perform a broad locali
 ## 10. Grant and backlog boundaries
 
 ```text
-NLnet = submitted / under review / not awarded
+NLnet = submitted / not selected / not awarded
 ~€50k = planning context only
 ```
 

@@ -2,6 +2,9 @@
 <!-- d3-source-scope: architecture-storage-authority -->
 # Velantrim Crystal — Architecture
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-08-14  
 **Current signed architecture checkpoint:** `76a9493b8ba64b832472ef9bfc1f1c23ebe6654e` / PR #392  
 **Retained verified storage-runtime checkpoint:** `bbd816c09dd39a02e6de6c1014438490572f40f6` / PR #337  
@@ -346,7 +349,7 @@ Crystal does not claim:
 - security, legal or GDPR certification;
 - awarded NLnet funding.
 
-NLnet remains **submitted / under review / not awarded**; approximate €50,000 is planning context only.
+NLnet remains **submitted / not selected / not awarded**; approximate €50,000 is planning context only.
 
 ## 15. Detailed contracts
 
