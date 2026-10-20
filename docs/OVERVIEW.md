@@ -1,5 +1,8 @@
 # 💠 Velantrim Exo-Cortex Crystal — Deep System Overview
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 > 👤 **Audience:** humans who want to understand the architecture without reading the repository as an internal engineering ledger.
 >
 > 🤖 **AI / automated agents:** use [Special for AI](./ai/README.md) instead. This document explains; it does not override live code, tests, CI, STATUS or the machine manifest.
@@ -486,7 +489,7 @@ Crystal does not claim:
 - legal, GDPR or security certification;
 - awarded NLnet funding.
 
-NLnet remains **submitted / under review / not awarded**. Approximate €50,000 remains planning context only.
+NLnet remains **submitted / not selected / not awarded**. Approximate €50,000 remains planning context only.
 
 ---
 

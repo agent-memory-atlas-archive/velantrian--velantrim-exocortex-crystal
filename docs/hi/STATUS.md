@@ -99,7 +99,7 @@ SQLite ordinary active local-first profile है। PostgreSQL/pgvector optiona
 
 ## Grant स्थिति
 
-NLnet NGI0 Commons Fund proposal **submitted / under review / not awarded** है। लगभग €50,000 planning/transparency context है; approved budget या payment commitment नहीं।
+NLnet NGI0 Commons Fund proposal **submitted / not selected / not awarded** है। लगभग €50,000 planning/transparency context है; approved budget या payment commitment नहीं।
 
 ## Historical runtime evidence
 
@@ -111,3 +111,18 @@ Retained checkpoint: `bbd816c09dd39a02e6de6c1014438490572f40f6`.
 ```
 
 ये historical provenance हैं, current test-count claim नहीं। Current acceptance exact CI से आती है।
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

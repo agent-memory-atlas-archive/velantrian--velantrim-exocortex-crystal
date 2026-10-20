@@ -1,7 +1,10 @@
 # Crystal baseline → funded delta → acceptance matrix
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-08-12  
-**Grant state:** submitted / under review / not awarded — **no award/budget change**.
+**Grant state:** submitted / not selected / not awarded — **no award/budget change**.
 
 Anything merged before an agreement is existing pre-agreement baseline and **cannot be counted
 again as future paid work**.
@@ -114,7 +117,7 @@ existence does not make Reader vector retrieval an existing capability.
 ## Funding and security non-claims
 
 Approximate €50,000 is planning only and does not represent an approved budget/payment
-commitment. NLnet is submitted / under review / not awarded.
+commitment. NLnet is submitted / not selected / not awarded.
 
 Local-first does not itself prove GDPR compliance or complete security. PostgreSQL/pgvector
 remains inactive `active=false`. #155, #165 and #214 remain separate backlog and are not

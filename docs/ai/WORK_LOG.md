@@ -2,6 +2,16 @@
 
 This compact log records material decisions, exact evidence, limitations and hand-offs. It does not replace Git history, issues, pull requests, `CHANGELOG.md` or Notion.
 
+## 2026-10-20 — NLnet final-outcome reconciliation · DRAFT
+
+- Authorized scope: one grant-status correction from live `main@6660210b65ff99362a16a7290d03b3f769b08cf0`; no runtime, architecture or other repository changes.
+- User-provided final outcome: `NOT_SELECTED / NOT_AWARDED`, decision date `2026-10-09`. Submission history stays `submitted=true`; current review is `under_review=false`; `awarded=false` and `budget_changed=false` remain unchanged.
+- Current English/public/AI surfaces and affected current grant assertions across all nine locales are reconciled. Historical translation source SHAs and D1–D5 checkpoints remain provenance, not newly certified full-source parity. This update certifies only the changed grant information.
+- Existing grant consumers/checkers and pytest expectations are adapted; regression coverage rejects reopened review, incorrect final decision/date and stale current grant assertions. Architectural, provenance and security gates are retained.
+- Historical archives, frozen evaluation/research/architecture contracts, RC-10 preregistration, original application/planning evidence and control SHAs are intentionally preserved. Their dated review status is not the current outcome.
+- Documentation impact: `GITHUB_AND_NOTION`; Notion access: `UNAVAILABLE`; synchronization: `HANDOFF_REQUIRED`. No Notion or private correspondence was accessed or published. See the pending NLnet hand-off.
+- Exact proposed head, complete changed-file list and executed check results belong to the single Draft PR and its CI; no merge, updated runtime checkpoint, funded delivery or new workstream is claimed here.
+
 ## 2026-08-16 — Outbox auto-backend restart continuity (#434 / PR #433)
 
 - Live starting point: `main@5e008af09f03750c6811ac4b6fdb147ad463fd78`; the audit first traced `core.queue` selection, enqueue and `drain_l3_outbox()` without changing runtime behavior.

@@ -2,6 +2,9 @@
 <!-- d4-source-scope: project-grant-governance-glossary -->
 # Crystal Glossary
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-08-12
 
 ## Authority and storage
@@ -82,7 +85,7 @@ repetition              != corroboration
 
 **Funded delta** — new measurable work performed under an agreement beyond the verified existing baseline. Merged pre-agreement work cannot be counted again.
 
-**NLnet state** — submitted / under review / not awarded.
+**NLnet state** — submitted / not selected / not awarded.
 
 **Native-speaker editorial certification** — independent human language-quality review by a qualified native speaker; not claimed merely because a translation exists.
 

@@ -97,4 +97,19 @@ RC-9 يقدم deterministic lexical candidate discovery. Comparator v1 وNLI neu
 
 ## 🚫 Non-claims
 
-لا يوجد automatic semantic matching كسلطة، ولا evidence admission تلقائي، ولا contradiction adjudication تلقائي، ولا dedicated Reader Core، ولا active PostgreSQL Reader runtime. NLnet remains submitted / under review / not awarded.
+لا يوجد automatic semantic matching كسلطة، ولا evidence admission تلقائي، ولا contradiction adjudication تلقائي، ولا dedicated Reader Core، ولا active PostgreSQL Reader runtime. NLnet remains submitted / not selected / not awarded.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

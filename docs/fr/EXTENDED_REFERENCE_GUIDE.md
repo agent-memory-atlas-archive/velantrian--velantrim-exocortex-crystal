@@ -144,7 +144,7 @@ candidate discovery != candidate adjudication
 
 ## Grant / Non-claims / Localization
 
-NLnet reste **submitted / under review / not awarded**. Environ **€50,000** est planning only ; **budget change: none**.
+NLnet reste **submitted / not selected / not awarded**. Environ **€50,000** est planning only ; **budget change: none**.
 
 Aucune security/legal/GDPR certification, native-speaker editorial certification, AGI/consciousness, universal truth, active PostgreSQL runtime, semantic/hybrid/vector Reader runtime, completed dedicated/full Reader ou automatic identity/corroboration/adjudication/evidence admission n’est revendiquée.
 
@@ -155,3 +155,18 @@ Le [Translation Status Ledger](../TRANSLATION_STATUS.md) donne l’état global 
 Historical French D5 source : `d5f7f1c4c0908d24f8994e4fbec45c102b9ab7d9`. Current French refresh audit source : `main@7d03cce2c89f7a4c3fda85742eb358e6b49961f2`.
 
 Routes : [Policy](../EXTENDED_REFERENCE_POLICY.md), [Map](../DOCUMENTATION_MAP.md), [Status](../STATUS.md), [Architecture](../ARCHITECTURE.md), [ADR](../ADR.md), [Security](../../SECURITY.md), [Privacy](../../PRIVACY.md), [GDPR](../../GDPR.md), [Archive](../archive/README.md).
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

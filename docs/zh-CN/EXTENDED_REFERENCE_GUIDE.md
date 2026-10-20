@@ -124,7 +124,7 @@ PostgreSQL/pgvector 只是 inactive import/equivalence target，不代表 active
 
 ## 💶 Grant truth
 
-NLnet NGI0 Commons Fund：**submitted / under review / not awarded**。约 **€50,000** 是 planning context；**budget change: none**。
+NLnet NGI0 Commons Fund：**submitted / not selected / not awarded**。约 **€50,000** 是 planning context；**budget change: none**。
 
 ## 🌍 Localization state vocabulary
 
@@ -141,3 +141,18 @@ NLnet NGI0 Commons Fund：**submitted / under review / not awarded**。约 **€
 本扩展参考不声称 semantic/hybrid/vector Reader runtime、NLI runtime filter、RRTIC runtime provider、active PostgreSQL/pgvector Reader selection、automatic proposition identity、automatic corroboration、universal truth、zero hallucinations 或 legal/security/GDPR certification。
 
 英文 policy 主源：[`docs/EXTENDED_REFERENCE_POLICY.md`](../EXTENDED_REFERENCE_POLICY.md)。
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

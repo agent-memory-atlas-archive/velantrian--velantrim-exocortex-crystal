@@ -279,10 +279,10 @@ successful import != backend activation
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress / under review
+review: completed
 award: not awarded
 budget change: none
-status: submitted / under review / not awarded
+status: submitted / not selected / not awarded
 ```
 
 लगभग €50,000 केवल planning/transparency context है; approved budget या payment commitment नहीं। Agreement से पहले merged work existing baseline है।
@@ -356,3 +356,18 @@ python scripts/eval_gate.py --out-dir eval-artifacts
 - [Contributing](./CONTRIBUTING.md) · [Security](./SECURITY.md) · [Governance](./GOVERNANCE.md)
 
 License: [AGPL-3.0](./LICENSE).
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

@@ -287,7 +287,7 @@ rrtic_runtime_authorization            = false
 
 Crystal не заявляет universal truth/zero hallucinations, automatic semantic equivalence, automatic corroboration/evidence admission, semantic/hybrid/vector Reader runtime, Reader FTS/ANN/vector DB, NLI runtime filter, CrossEncoder reranker, RRTIC runtime provider, implemented EPIS runtime, completed dedicated Reader, active PostgreSQL Reader selection, automatic backend cutover, legal/GDPR/security/supply-chain certification.
 
-**Funding truth:** NLnet — **submitted / under review / not awarded**. Приблизительно **€50,000** — planning only, не approved budget/award/payment commitment.
+**Funding truth:** NLnet — **submitted / not selected / not awarded**. Приблизительно **€50,000** — planning only, не approved budget/award/payment commitment.
 
 ## 🛠 Quickstart
 
@@ -363,3 +363,18 @@ English — primary/source language и conflict resolver. Политика: [doc
 Changes должны сохранять authority boundaries, tests/coverage gates и truthful public claims. См. [CONTRIBUTING](./CONTRIBUTING.md), [GOVERNANCE](./GOVERNANCE.md), [SECURITY](./SECURITY.md).
 
 License: [AGPL-3.0](./LICENSE).
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

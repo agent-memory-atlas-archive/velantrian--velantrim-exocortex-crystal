@@ -312,7 +312,7 @@ PostgreSQL/pgvector est une surface d’import et d’équivalence inactive. Il 
 
 Crystal ne revendique **aucune** universal truth / zero hallucinations, automatic semantic equivalence, automatic corroboration/evidence admission, semantic/hybrid/vector Reader runtime, Reader FTS/ANN/vector DB, NLI runtime filter, CrossEncoder reranker, RRTIC runtime provider, EPIS runtime implémenté, dedicated Reader complet, PostgreSQL Reader selection active, automatic backend cutover ou certification legal/GDPR/security/supply-chain.
 
-**Funding truth :** NLnet — **submitted / under review / not awarded**. Environ **€50,000** constitue seulement un planning context, pas un approved budget, award ou payment commitment.
+**Funding truth :** NLnet — **submitted / not selected / not awarded**. Environ **€50,000** constitue seulement un planning context, pas un approved budget, award ou payment commitment.
 
 ## 🛠 Quickstart
 
@@ -388,3 +388,18 @@ Une traduction ne crée ni nouvelle architecture ni nouvelle autorité épistém
 ## 🤝 Contribution et licence
 
 Les changements doivent préserver les Authority Boundaries, les tests/coverage, les résultats négatifs de recherche et la précision des capability claims. Voir [CONTRIBUTING.md](./CONTRIBUTING.md). Licence : [AGPL-3.0](./LICENSE).
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

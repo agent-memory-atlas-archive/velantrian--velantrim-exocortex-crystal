@@ -111,6 +111,21 @@ Comparator v1 und NLI neutral-filter v1 bleiben eingefrorene failed evaluation e
 
 Source restriction/sensitivity context bleibt Policy-Metadatum; Rank, Working-Set-Füllung oder RRTIC qualifier schwächen Privacy nicht. Es wird keine aktive PostgreSQL Reader runtime, kein automatic switching, kein semantic/hybrid Reader runtime, keine FTS/ANN/vector DB, kein RRTIC runtime provider, keine automatic evidence/identity/Canon authority, keine security/legal/GDPR certification und kein awarded funding behauptet.
 
-NLnet bleibt **submitted / under review / not awarded**; ungefähr €50,000 sind planning only.
+NLnet bleibt **submitted / not selected / not awarded**; ungefähr €50,000 sind planning only.
 
 Historischer deutscher Source: `main@208f1c772ee3a112cb803d2413c120bef23adb05`. Current German refresh audit source: `main@ad8cec8c868f64b6dfbdc3bf3087230f59c3861c`.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

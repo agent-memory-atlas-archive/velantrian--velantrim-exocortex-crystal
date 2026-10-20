@@ -106,6 +106,21 @@ Guardian, TruthGate, TrustSnapshot и CanonicalView остаются отдел�
 
 SQLite ordinary active local-first. PostgreSQL/pgvector inactive `active=false`; automatic backend switching отсутствует.
 
-NLnet **submitted / under review / not awarded**; ~€50,000 planning only; budget change none.
+NLnet **submitted / not selected / not awarded**; ~€50,000 planning only; budget change none.
 
 Русская current parity refresh привязана к `main@9666781d390e3276a111cb5ee1735f6606a76283`, а historical RC-5/6/7 markers остаются immutable provenance. Остальные восемь locale packs этим milestone не меняются.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

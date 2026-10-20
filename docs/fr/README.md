@@ -104,7 +104,7 @@ similarity signal != identity proof
 repetition across sources != corroboration
 ```
 
-SQLite reste ordinary active local-first. PostgreSQL/pgvector Reader reste inactif : `active=false`. NLnet reste **submitted / under review / not awarded** ; environ €50,000 est planning only.
+SQLite reste ordinary active local-first. PostgreSQL/pgvector Reader reste inactif : `active=false`. NLnet reste **submitted / not selected / not awarded** ; environ €50,000 est planning only.
 
 ## 📎 Provenance de localisation
 
@@ -120,3 +120,18 @@ Après ce milestone français, six autres Reader-dependent locale packs restent 
 - [Translation status](../TRANSLATION_STATUS.md)
 
 Ces documents définissent la sémantique des source checkpoints et empêchent qu’un ancien `CURRENT` soit interprété automatiquement comme une parité avec une source anglaise plus récente.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

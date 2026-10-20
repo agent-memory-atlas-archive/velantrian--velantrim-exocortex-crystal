@@ -147,8 +147,23 @@ PostgreSQL/pgvector остаётся `active=false`. SQLite ordinary local-first
 
 Русская D1/D3/D4/D5 documentation обновляется в Issue #410 к current repository truth `main@9666781d390e3276a111cb5ee1735f6606a76283`; historical RC-7 source остаётся immutable provenance. Остальные восемь locale packs этим milestone не изменяются.
 
-NLnet остаётся **submitted / under review / not awarded**. Приблизительно €50,000 — planning only.
+NLnet остаётся **submitted / not selected / not awarded**. Приблизительно €50,000 — planning only.
 
 ## Stop boundary
 
 Localization parity не создаёт новых capabilities и не подразумевает следующий model/discriminator/runtime milestone.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

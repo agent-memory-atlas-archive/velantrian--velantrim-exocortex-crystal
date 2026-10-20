@@ -107,7 +107,7 @@ similarity signal != identity proof
 repetition across sources != corroboration
 ```
 
-SQLite ordinary active local-first. PostgreSQL/pgvector Reader inactive `active=false`. NLnet **submitted / under review / not awarded**; ~€50,000 planning only.
+SQLite ordinary active local-first. PostgreSQL/pgvector Reader inactive `active=false`. NLnet **submitted / not selected / not awarded**; ~€50,000 planning only.
 
 ## 📎 Localization provenance
 
@@ -123,3 +123,18 @@ Current Russian parity refresh audit source: `main@9666781d390e3276a111cb5ee1735
 - [Translation status](../TRANSLATION_STATUS.md)
 
 Эти два документа определяют source checkpoint semantics и не позволяют историческому `CURRENT` автоматически означать parity с более новым English source.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

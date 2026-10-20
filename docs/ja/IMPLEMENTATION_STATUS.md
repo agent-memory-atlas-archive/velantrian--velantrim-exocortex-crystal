@@ -95,7 +95,7 @@ Optional PostgreSQL/pgvector surface は inactive import/equivalence path のみ
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress
+review: completed
 award: not awarded
 budget change: none
 ```
@@ -107,3 +107,18 @@ budget change: none
 `bbd816c09dd39a02e6de6c1014438490572f40f6`、`2078 passed / 13 skipped / 0 failed`、`9756 statements / 100.00% line coverage` は historical compatibility evidence として保持されます。現在の repository test count ではありません。
 
 正確な live implementation / CI state は GitHub、[`docs/STATUS.md`](../STATUS.md)、[`TEST_REPORT.md`](../../TEST_REPORT.md)、[machine-readable manifest](../status/implementation-manifest.json) から解決してください。
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

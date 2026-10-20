@@ -85,10 +85,25 @@ evaluation pass != runtime authorization
 
 ## 💶 Grant
 
-NLnet funding state：**submitted / under review / not awarded**。约 **€50,000** 是 planning context only；**budget change: none**。`not awarded` 不能被翻译或重写成 approved/funded。
+NLnet funding state：**submitted / not selected / not awarded**。约 **€50,000** 是 planning context only；**budget change: none**。`not awarded` 不能被翻译或重写成 approved/funded。
 
 ## 🧾 Certification boundary
 
 `CURRENT` 表示 technical localization parity/freshness，不表示 native-speaker editorial certification、legal certification、GDPR certification 或 security certification。
 
 英文术语主源：[`docs/GLOSSARY.md`](../GLOSSARY.md)。
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

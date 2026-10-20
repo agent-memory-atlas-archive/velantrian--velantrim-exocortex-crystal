@@ -42,7 +42,7 @@ def test_readme_is_human_first_and_routes_ai_agents_explicitly() -> None:
         "cross-document candidate != Canon relation",
         "no automatic semantic matching",
         "NLI_NEUTRAL_FILTER_GATE_FAILED",
-        "submitted / under review / not awarded",
+        "submitted / not selected / not awarded",
         "active=false",
     ):
         assert marker in readme, marker
@@ -70,7 +70,7 @@ def test_deep_overview_is_human_explanation_not_machine_authority() -> None:
     ):
         assert marker in overview, marker
 
-    assert "submitted / under review / not awarded" in overview
+    assert "submitted / not selected / not awarded" in overview
 
 
 def test_ai_entrypoint_keeps_volatile_provenance_live_resolved() -> None:

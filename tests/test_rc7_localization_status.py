@@ -81,7 +81,7 @@ def test_all_russian_reader_surfaces_preserve_rc7_authority_firewall():
         "similarity signal",
         "repetition across sources",
         "active=false",
-        "submitted / under review / not awarded",
+        "submitted / not selected / not awarded",
     )
     for path in RUSSIAN_DOCS:
         text = _text(path)

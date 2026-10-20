@@ -46,7 +46,7 @@ contradiction candidate != confirmed contradiction
 - **PostgreSQL/pgvector:** optional inactive target, `active=false`; import success activation नहीं।
 - **dedicated Reader Core:** `false`; implemented claim नहीं।
 - **semantic/vector Reader runtime:** `false`।
-- **NLnet:** submitted / under review / not awarded।
+- **NLnet:** submitted / not selected / not awarded।
 - **लगभग €50,000:** planning/transparency context only; approved budget/payment commitment नहीं; budget change: none।
 
 ```text
@@ -54,3 +54,18 @@ physical L3 != strict Canon
 ```
 
 Legal/GDPR/security या native-speaker editorial certification claim नहीं है।
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

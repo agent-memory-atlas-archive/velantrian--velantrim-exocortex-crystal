@@ -1,5 +1,8 @@
 # 🗺️ Crystal Documentation Map
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-08-14  
 **Purpose:** route humans, AI agents and auditors to the right representation of the same project truth.
 
@@ -146,7 +149,7 @@ Ordinary storage truth remains local-first SQLite. PostgreSQL/pgvector is not an
 
 ## 🎓 Grant / governance — D4
 
-Grant truth remains **submitted / under review / not awarded**; approximate €50,000 remains planning context only.
+Grant truth remains **submitted / not selected / not awarded**; approximate €50,000 remains planning context only.
 
 - [Project, grant and governance overview](./PROJECT_GRANT_AND_GOVERNANCE.md)
 - [Grant scope](./GRANT_NLNET_SCOPE.md)

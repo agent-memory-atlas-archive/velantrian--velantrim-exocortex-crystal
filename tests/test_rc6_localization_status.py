@@ -50,7 +50,7 @@ def test_rc6_localization_manifest_and_russian_parity():
         "summary != verified fact",
         "summary != Canon admission",
         "dedicated_reader_core                  = false",
-        "submitted / under review / not awarded",
+        "submitted / not selected / not awarded",
     ):
         assert marker in root
 

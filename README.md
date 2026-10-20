@@ -1,5 +1,8 @@
 # 🔱 Velantrim ExoCortex — Crystal
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 > 🌐 🇬🇧 **English** · 🇩🇪 [Deutsch](./README.de.md) · 🇫🇷 [Français](./README.fr.md) · 🇪🇸 [Español](./README.es.md) · 🇮🇹 [Italiano](./README.it.md) · 🇷🇺 [Русский](./README.ru.md) · 🇨🇳 [简体中文](./README.zh-CN.md) · 🇸🇦 [العربية](./README.ar.md) · 🇯🇵 [日本語](./README.ja.md) · 🇮🇳 [हिन्दी](./README.hi.md)
 
 ## 💠 Memory and evidence infrastructure that keeps retrieval separate from truth
@@ -249,7 +252,7 @@ Crystal does **not** claim:
 - production-scale retrieval quality from bounded synthetic evaluation surfaces;
 - legal, GDPR, security or supply-chain certification.
 
-**Funding truth:** NLnet remains **submitted / under review / not awarded**. Approximate **€50,000** is planning context only, not an approved budget, grant award or payment commitment.
+**Funding truth:** NLnet remains **submitted / not selected / not awarded**. Approximate **€50,000** is planning context only, not an approved budget, grant award or payment commitment.
 
 ## 🛠 Quickstart
 
@@ -341,7 +344,7 @@ For live repository HEAD, open PRs/issues and latest CI, resolve GitHub directly
 
 English is the primary source language. Localized README/detail surfaces are tied to the source checkpoints recorded in [Translation Status](./docs/TRANSLATION_STATUS.md). A useful older translation must not be mistaken for newer English implementation truth.
 
-This English presentation update does not imply localization parity or modify any non-English document.
+The historical English presentation update did not establish newer localization parity. The current grant-only reconciliation updates affected grant assertions in all nine locales without advancing their full technical source checkpoints.
 
 ## 🤝 Contributing and license
 

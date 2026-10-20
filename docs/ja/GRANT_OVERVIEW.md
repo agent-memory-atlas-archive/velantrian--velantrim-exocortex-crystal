@@ -17,7 +17,7 @@
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress
+review: completed
 award: not awarded
 budget change: none
 ```
@@ -74,3 +74,18 @@ Guardian は structural integrity / structural policy boundary、TruthGate は L
 - native-speaker editorial certification.
 
 英語 funding/governance source: [`docs/PROJECT_GRANT_AND_GOVERNANCE.md`](../PROJECT_GRANT_AND_GOVERNANCE.md)。
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

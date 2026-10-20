@@ -37,9 +37,24 @@
 ## 💶 Funding vocabulary
 
 ```text
-submitted / under review / not awarded
+submitted / not selected / not awarded
 budget change: none
 €50,000 = planning context only
 ```
 
 لا تعني `CURRENT` في localization وجود native-speaker editorial certification. ولا توجد security/legal/GDPR certification claim.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

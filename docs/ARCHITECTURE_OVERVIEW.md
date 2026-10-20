@@ -2,6 +2,9 @@
 <!-- d3-source-scope: architecture-storage-authority -->
 # Crystal Architecture Overview
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-08-14  
 **Purpose:** current English architecture entry point.  
 **Authority:** merged code, exact CI, `docs/ai/CURRENT_STATE.md` and the implementation manifest remain technical truth.
@@ -207,7 +210,7 @@ Crystal does not claim:
 - security, legal or GDPR certification;
 - awarded NLnet funding.
 
-NLnet remains **submitted / under review / not awarded**; approximate €50,000 is planning context only.
+NLnet remains **submitted / not selected / not awarded**; approximate €50,000 is planning context only.
 RC-1…RC-9, Comparator v1, NLI v1 and RRTIC-v1 are existing pre-agreement history if completed before
 any funding agreement and cannot later be relabeled as newly funded runtime delivery.
 

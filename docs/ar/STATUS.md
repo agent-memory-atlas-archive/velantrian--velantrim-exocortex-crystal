@@ -84,7 +84,7 @@ active=false
 
 ## 💶 المنحة
 
-NLnet NGI0 Commons Fund: **submitted / under review / not awarded**. نحو €50,000 planning context فقط، budget change: none. لا يوجد grant-award claim ولا legal/security/GDPR certification claim.
+NLnet NGI0 Commons Fund: **submitted / not selected / not awarded**. نحو €50,000 planning context فقط، budget change: none. لا يوجد grant-award claim ولا legal/security/GDPR certification claim.
 
 ## 🚫 غير مصرح به حالياً
 
@@ -95,3 +95,18 @@ NLnet NGI0 Commons Fund: **submitted / under review / not awarded**. نحو €5
 - embeddings/ANN/vector Reader stack؛
 - active PostgreSQL normal runtime؛
 - automatic contradiction adjudication أو automatic winner selection.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

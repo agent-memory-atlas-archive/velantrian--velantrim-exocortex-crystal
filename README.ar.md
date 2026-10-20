@@ -305,12 +305,12 @@ Ring Zero: 7/7
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress
+review: completed
 award: not awarded
 budget change: none
 ```
 
-الحالة الدقيقة المختصرة تبقى: **submitted / under review / not awarded**. نحو **€50,000** هو planning/transparency context فقط، وليس awarded budget أو التزام دفع. ما تم دمجه قبل أي اتفاق يبقى existing baseline ولا يجوز احتسابه لاحقاً كـ funded delta جديد.
+الحالة الدقيقة المختصرة تبقى: **submitted / not selected / not awarded**. نحو **€50,000** هو planning/transparency context فقط، وليس awarded budget أو التزام دفع. ما تم دمجه قبل أي اتفاق يبقى existing baseline ولا يجوز احتسابه لاحقاً كـ funded delta جديد.
 
 ## 🚧 Capability reality-check
 
@@ -379,3 +379,18 @@ docs/TRANSLATION_STATUS.md
 ```
 
 الإنجليزية هي المصدر الحاكم عند التعارض. كلمة `CURRENT` تعني parity against a recorded source/audit contract، ولا تعني native-speaker certification ولا freshness تلقائية بعد أي تغيير إنجليزي مستقبلي.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

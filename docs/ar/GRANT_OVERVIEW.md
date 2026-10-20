@@ -18,12 +18,12 @@ Crystal هو مشروع local-first للذاكرة والأدلة وحدود ا�
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress
+review: completed
 award: not awarded
 budget change: none
 ```
 
-الحالة المختصرة الدقيقة: **submitted / under review / not awarded**. مبلغ **€50,000** تقريباً هو planning/transparency context فقط؛ ليس approved budget أو award أو payment commitment.
+الحالة المختصرة الدقيقة: **submitted / not selected / not awarded**. مبلغ **€50,000** تقريباً هو planning/transparency context فقط؛ ليس approved budget أو award أو payment commitment.
 
 أي عمل merged قبل اتفاق تمويل يبقى existing baseline ولا يجوز إعادة احتسابه funded delta لاحقاً.
 
@@ -63,3 +63,18 @@ Guardian وTruthGate وTrustSnapshot وCanonicalView تبقى authority boundari
 - لا security/legal/GDPR certification؛
 - لا native-speaker editorial certification؛
 - لا grant award.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

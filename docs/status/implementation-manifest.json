@@ -460,8 +460,11 @@
   "grant": {
     "program": "NLnet NGI0 Commons Fund",
     "submitted": true,
-    "under_review": true,
+    "under_review": false,
     "awarded": false,
+    "decision": "NOT_SELECTED",
+    "award_status": "NOT_AWARDED",
+    "decision_date": "2026-10-09",
     "budget_changed": false,
     "baseline_issue": 333,
     "rule": "Merged pre-agreement work through Reader RC-9 plus completed Comparator v1, NLI v1 and RRTIC-v1 research/architecture history is existing baseline if completed before an agreement and cannot be counted again as funded delivery"

@@ -133,6 +133,21 @@ evaluation pass != runtime authorization
 
 ## 💶 Grant
 
-NLnet NGI0 Commons Fund: **submitted / under review / not awarded**。約 €50,000 は planning context であり approved funding ではありません。
+NLnet NGI0 Commons Fund: **submitted / not selected / not awarded**。約 €50,000 は planning context であり approved funding ではありません。
 
 英語の詳細 architecture contract: [`docs/ARCHITECTURE.md`](../ARCHITECTURE.md)。日本語の storage/authority 境界: [`STORAGE_AND_AUTHORITY_BOUNDARIES.md`](./STORAGE_AND_AUTHORITY_BOUNDARIES.md)。
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

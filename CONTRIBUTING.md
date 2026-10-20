@@ -2,6 +2,9 @@
 <!-- d4-source-scope: project-grant-governance-glossary -->
 # 🤝 Contributing to Velantrim ExoCortex — Crystal
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 Thank you for contributing to Crystal, an open-source, local-first memory, evidence and
 decision-boundary runtime for trustworthy AI systems.
 
@@ -116,7 +119,7 @@ editorial certification is not implied unless it occurred.
 
 ## 💶 Grant-safe contributions
 
-Current status is `submitted / under review / not awarded` with no budget change.
+Current status is `submitted / not selected / not awarded` with no budget change.
 
 Anything merged before a funding agreement is existing baseline and cannot be relabelled as
 future funded delivery. Grant milestones require a new measurable delta and independently

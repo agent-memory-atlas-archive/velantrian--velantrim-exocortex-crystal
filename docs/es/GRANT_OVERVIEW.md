@@ -19,12 +19,12 @@
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress
+review: completed
 award: not awarded
 budget change: none
 ```
 
-NLnet sigue **submitted / under review / not awarded**. Aproximadamente **€50,000** es únicamente planning/transparency context, no approved budget, grant award ni payment commitment.
+NLnet sigue **submitted / not selected / not awarded**. Aproximadamente **€50,000** es únicamente planning/transparency context, no approved budget, grant award ni payment commitment.
 
 ## 🧬 Existing baseline
 
@@ -98,3 +98,18 @@ Los cambios significativos de arquitectura/invariant empiezan con Issue/RFC y re
 ## Localization provenance
 
 Historical Spanish grant source: `151b41c680190f7f3de729bf63e8e80a9d2285ce`. Current Spanish refresh audit source: `main@bbe6b0d3d90d80b3c669ddab5fc56aa1bfe419eb`. Los cinco idiomas que permanecen refresh-needed no se actualizan en Issue #417.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

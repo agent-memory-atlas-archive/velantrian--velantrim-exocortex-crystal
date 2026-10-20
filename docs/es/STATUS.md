@@ -109,6 +109,21 @@ Guardian, TruthGate, TrustSnapshot y CanonicalView siguen siendo Authority/read 
 
 SQLite sigue ordinary active local-first. PostgreSQL/pgvector sigue inactivo `active=false`; no existe automatic backend switching.
 
-NLnet sigue **submitted / under review / not awarded**; aproximadamente €50,000 es planning only; budget change none.
+NLnet sigue **submitted / not selected / not awarded**; aproximadamente €50,000 es planning only; budget change none.
 
 La Spanish current parity se audita contra `main@bbe6b0d3d90d80b3c669ddab5fc56aa1bfe419eb`. El antiguo source marker `a497b7d3cfbe59ca75b11d7449d5a728455b3130` permanece como provenance histórica. El lifecycle state actual del repositorio siempre debe resolverse desde GitHub live.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

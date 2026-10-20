@@ -346,7 +346,7 @@ candidate / suspicion 自体はこの決定を代替しません。
 ```text
 programme: NLnet NGI0 Commons Fund
 proposal: submitted
-review: in progress
+review: completed
 award: not awarded
 budget change: none
 ```
@@ -430,3 +430,18 @@ Crystal は次を主張しません。
 - [AGPL-3.0 License](./LICENSE)
 
 > 英語版が primary/source language です。Japanese `CURRENT` は recorded technical parity を意味し、native-speaker editorial certification を意味しません。
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

@@ -1,5 +1,8 @@
 # Velantrim Crystal — Current Status
 
+**NLnet decision (2026-10-09):** `NOT_SELECTED / NOT_AWARDED`; review completed. Submission remains recorded; no award, approved budget or payment commitment.
+
+
 **Status date:** 2026-09-07  
 **Lifecycle:** **V1 COMPLETE / 100% / FREEZE-STABILITY**  
 **V1 P0:** `0`  
@@ -147,7 +150,7 @@ Any such phase requires a separate explicit owner decision and fresh validation 
 
 ## Grant status
 
-NLnet remains **submitted / under review / not awarded**. Approximate **€50,000** remains planning context only; no award or budget change is implied by V1 completion.
+NLnet remains **submitted / not selected / not awarded**. Approximate **€50,000** remains planning context only; no award or budget change is implied by V1 completion.
 
 ---
 

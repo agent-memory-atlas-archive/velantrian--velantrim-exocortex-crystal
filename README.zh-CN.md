@@ -346,7 +346,7 @@ Crystal **不声称**：
 - 从 bounded synthetic evaluation 推导 production-scale retrieval quality；
 - legal、GDPR、security 或 supply-chain certification。
 
-**Funding truth：** NLnet NGI0 Commons Fund proposal 仍是 **submitted / under review / not awarded**。约 **€50,000** 仅是 planning/transparency context，不是 approved budget、grant award 或 payment commitment。
+**Funding truth：** NLnet NGI0 Commons Fund proposal 仍是 **submitted / not selected / not awarded**。约 **€50,000** 仅是 planning/transparency context，不是 approved budget、grant award 或 payment commitment。
 
 ## 🛠 Quickstart
 
@@ -449,3 +449,18 @@ English 是 primary source language。Localized README/detail surfaces 与 [Tran
 所有变更都必须保持 authority boundaries、executable tests、coverage gates 与 truthful public claims。参见 [CONTRIBUTING](./CONTRIBUTING.md)、[Governance](./GOVERNANCE.md) 与 [Security](./SECURITY.md)。
 
 License：[AGPL-3.0](./LICENSE)。
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

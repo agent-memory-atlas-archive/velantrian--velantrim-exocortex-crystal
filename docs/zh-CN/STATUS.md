@@ -110,6 +110,21 @@ Guardian、TruthGate、TrustSnapshot 与 CanonicalView 保持彼此独立的 aut
 
 SQLite 是 ordinary active local-first path。PostgreSQL/pgvector 仍是 inactive target，`active=false`；不存在 automatic backend switching。`physical L3 != strict Canon`，successful import 也不是 backend activation。
 
-NLnet 仍为 **submitted / under review / not awarded**；约 €50,000 只是 planning context，budget change none。
+NLnet 仍为 **submitted / not selected / not awarded**；约 €50,000 只是 planning context，budget change none。
 
 当前简体中文 parity 以 `main@5e6301f0eaee1a6c85d8543be89dc2e606dc05a8` 为 audit base。旧 source marker `a497b7d3cfbe59ca75b11d7449d5a728455b3130` 仅保留为历史 provenance；实时 repository lifecycle state 必须从 GitHub live 解析。
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

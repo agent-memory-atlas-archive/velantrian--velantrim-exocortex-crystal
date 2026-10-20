@@ -287,7 +287,7 @@ Diese Metriken sind bounded retrieval evidence, nicht semantic correctness, epis
 
 Crystal behauptet **keine** universal truth / zero hallucinations, automatic semantic equivalence, automatic corroboration/evidence admission, semantic/hybrid/vector Reader runtime, Reader FTS/ANN/vector DB, NLI runtime filter, CrossEncoder reranker, RRTIC runtime provider, implementierten EPIS runtime, completed dedicated Reader, aktive PostgreSQL Reader selection, automatic backend cutover oder legal/GDPR/security/supply-chain certification.
 
-**Funding truth:** NLnet — **submitted / under review / not awarded**. Ungefähr **€50,000** sind planning only, kein approved budget, award oder payment commitment.
+**Funding truth:** NLnet — **submitted / not selected / not awarded**. Ungefähr **€50,000** sind planning only, kein approved budget, award oder payment commitment.
 
 ## 🛠 Quickstart
 
@@ -363,3 +363,18 @@ English bleibt primary/source language und conflict resolver. `CURRENT` bedeutet
 ## 🤝 Mitwirken und Lizenz
 
 Änderungen müssen Authority-Boundaries, Tests/Coverage, negative Forschungsergebnisse und genaue Capability Claims erhalten. Siehe [CONTRIBUTING.md](./CONTRIBUTING.md). Lizenz: [AGPL-3.0](./LICENSE).
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

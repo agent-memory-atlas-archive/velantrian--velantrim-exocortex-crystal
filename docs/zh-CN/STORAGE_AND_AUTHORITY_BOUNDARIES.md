@@ -114,7 +114,7 @@ RRTIC-v1：architecture contract only。
 
 ## 💶 Grant boundary
 
-NLnet 仍是 **submitted / under review / not awarded**；约 €50,000 仅用于 planning/transparency context。
+NLnet 仍是 **submitted / not selected / not awarded**；约 €50,000 仅用于 planning/transparency context。
 
 ## 📚 相关合同
 
@@ -123,3 +123,18 @@ NLnet 仍是 **submitted / under review / not awarded**；约 €50,000 仅用�
 - [Migration Contract](../architecture/CROSS_BACKEND_MIGRATION_CONTRACT.md)
 - [Inactive PostgreSQL Import](../architecture/POSTGRESQL_INACTIVE_IMPORT.md)
 - [ADR-021](../adr/ADR-021-CROSS-BACKEND-MIGRATION-CONTRACT.md)
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```

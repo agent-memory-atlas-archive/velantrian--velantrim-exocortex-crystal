@@ -150,8 +150,23 @@ PostgreSQL/pgvector bleibt `active=false`. SQLite bleibt ordinary active local-f
 
 Die deutsche D1/D3/D4/D5-Dokumentation wird in Issue #412 gegen `main@ad8cec8c868f64b6dfbdc3bf3087230f59c3861c` aktualisiert. Historische Source-Marker bleiben Provenienz. Die sieben übrigen nicht-russischen und nicht-deutschen locale packs werden in diesem Milestone nicht aktualisiert.
 
-NLnet bleibt **submitted / under review / not awarded**. Ungefähr €50,000 sind planning only.
+NLnet bleibt **submitted / not selected / not awarded**. Ungefähr €50,000 sind planning only.
 
 ## Stop Boundary
 
 Localization parity erzeugt keine neue Capability und autorisiert keinen nächsten model/discriminator/runtime milestone.
+### NLnet grant-only update
+
+> Grant-only update; the full translation checkpoint remains historical and is not being declared newly current.
+
+```text
+proposal: submitted
+submitted: true
+under_review: false
+awarded: false
+status: submitted / not selected / not awarded
+review: completed
+decision: NOT_SELECTED
+award status: NOT_AWARDED
+decision date: 2026-10-09
+```
