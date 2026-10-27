@@ -1090,6 +1090,81 @@ def test_generate_answer_blocks_on_user_claimed_facts_only():
     assert out["facts"] == []
 
 
+@pytest.mark.parametrize(
+    ("source_status", "truth_status"),
+    [
+        ("USER_REPORTED", "USER_CLAIMED"),
+        ("LLM_OUTPUT", "UNVERIFIED"),
+        # Stale/inconsistent VERIFIED labels must not launder weak provenance.
+        ("USER_REPORTED", "VERIFIED"),
+        ("LLM_OUTPUT", "VERIFIED"),
+    ],
+)
+def test_same_claim_ab_pair_only_verified_evidence_can_change_answer_content(
+    monkeypatch, source_status, truth_status
+):
+    """Hold query and claim constant; vary only evidence provenance/verdict.
+
+    Use the real deterministic extractive backend so assertions cover actual
+    answer text, grounding facts, and trace provenance.
+    """
+    from core import pipeline
+    from core.generation import ExtractiveGenerator
+
+    monkeypatch.setattr(pipeline, "get_generator", lambda: ExtractiveGenerator())
+    query = "Which orbit does the test planet follow?"
+    claim = "The test planet follows orbit Q."
+    common = {
+        "fact_id": "same-claim",
+        "claim": claim,
+        "claim_type": "WORLD_FACT",
+        "epistemic_state": "Validated",
+        "confidence": 1.0,
+        "restricted": False,
+    }
+    verified = {
+        **common,
+        "source": "independent-source:fixture-1",
+        "source_status": "EXTERNAL",
+        "truth_status": "VERIFIED",
+    }
+    unsupported = {
+        **common,
+        "source": "user-or-model-assertion:fixture-2",
+        "source_status": source_status,
+        "truth_status": truth_status,
+    }
+
+    supported_out = pipeline.generate_answer(
+        {**_pack(verified), "query": query},
+        trace=[{"fact_id": "same-claim", "source": verified["source"]}],
+    )
+    unsupported_out = pipeline.generate_answer(
+        {**_pack(unsupported), "query": query},
+        trace=[{"fact_id": "same-claim", "source": unsupported["source"]}],
+    )
+
+    assert supported_out["answer"] == claim
+    assert [f["fact_id"] for f in supported_out["facts"]] == ["same-claim"]
+    assert supported_out["facts"][0]["source_status"] == "EXTERNAL"
+    assert supported_out["facts"][0]["truth_status"] == "VERIFIED"
+    assert supported_out["trace"] == [{
+        "fact_id": "same-claim",
+        "source": "independent-source:fixture-1",
+        "epistemic_state": "Validated",
+    }]
+
+    assert unsupported_out["answer"] is None
+    assert claim not in (unsupported_out["answer"] or "")
+    assert unsupported_out["facts"] == []
+    assert unsupported_out["total_facts"] == 0
+    assert "insufficient grounding" in unsupported_out["error"]
+    # A refusal can retain diagnostic provenance, but not a factual answer.
+    assert len(unsupported_out["trace"]) == 1
+    assert unsupported_out["trace"][0]["source"] == unsupported["source"]
+    assert unsupported_out["trace"][0]["epistemic_state"] == "Validated"
+
+
 def test_generate_answer_grounds_only_the_verified_fact_from_a_mixed_pack():
     """Mixed candidate set: VERIFIED, USER_CLAIMED, Contradicted, restricted —
     only the VERIFIED, unrestricted, non-contradicted fact grounds the answer."""

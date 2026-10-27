@@ -147,11 +147,15 @@ itself and never by writing to L3.
 
 This module is **not currently wired into `generate_answer()`** or any other
 current read-path runtime call; `decide_response_policy` is referenced only
-from its own module, its docs, and its tests as of this writing, and the
-read-path wiring work is tracked separately (PR #202, open/unmerged). The
-Response Permission Axis therefore evaluates the policy contract and its
-planned future read-path wiring, not a current end-to-end runtime
-answer-control claim.
+from its own module, its docs, and its tests as of this writing. PR #202,
+which proposed exposing response-policy metadata on the read path, was
+closed on 2026-07-05 without merging. Paired read-path tests show that the
+separate strict `CanonicalView` filter blocks non-verified grounding and
+prevents those claims from appearing in the extractive answer. That is an
+enforced factual-grounding boundary, but it does not enforce the richer
+ASSERT/HEDGE/SPECULATIVE/REFUSE framing contract defined by this function.
+The function remains a standalone policy contract, not a current end-to-end
+response-framing guarantee.
 
 **Response permission is not based on confidence alone.** A high confidence
 score does not by itself grant assertive response permission; the contract
@@ -282,8 +286,8 @@ This document does **not**:
 - claim Guardian is a discrete, implemented module;
 - claim that "ResponseGate" exists in Crystal's code;
 - claim that `decide_response_policy` is currently wired into
-  `generate_answer()` or any other live read-path call (read-path wiring is
-  tracked separately in PR #202, open/unmerged);
+  `generate_answer()` or any other live read-path call (PR #202 was closed
+  without merging on 2026-07-05);
 - claim that `core/pipeline.py` / `core/review.py` are the only code paths
   that ever call `merge_fact()` (other sync/reconcile/compliance paths exist
   and are out of scope for the Consolidation Axis as defined here);
